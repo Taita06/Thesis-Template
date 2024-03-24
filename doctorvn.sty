@@ -1,0 +1,395 @@
+% Điều chỉnh bởi TS. Nguyen Viet Ha, FETEL, HCMUS
+% Ngày điều chỉnh: 10/01/2019
+
+%
+% Doctor thesis style file
+%
+
+
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage[UKenglish]{datetime}
+\usepackage{tabularx}
+
+\textwidth=160mm
+\textheight=230mm
+\topmargin=-10mm
+
+%In giấy thì chọn:
+\oddsidemargin=5mm
+\evensidemargin=-5.5mm
+%In CD thì chọn:
+%\oddsidemargin=0mm
+%\evensidemargin=-1mm
+
+\renewcommand{\baselinestretch}{1.08} %Khoảng cách giữa 2 dòng
+\setlength\belowcaptionskip{2mm}
+
+%%%
+%%% Title Page
+%%%
+\newcommand*{\firstuniversity}[1]{\gdef\@firstuniversity{#1}}
+\newcommand*{\seconduniversity}[1]{\gdef\@seconduniversity{#1}}
+\newcommand*{\faculty}[1]{\gdef\@faculty{#1}}
+\newcommand*{\department}[1]{\gdef\@department{#1}}
+\newcommand*{\departmentId}[1]{\gdef\@departmentId{#1}}
+\newcommand*{\major}[1]{\gdef\@major{#1}}
+\newcommand*{\reporttype}[1]{\gdef\@reporttype{#1}}
+\newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}}
+\newcommand*{\studentid}[1]{\gdef\@studentid{#1}}
+\newcommand*{\authorEN}[1]{\gdef\@authorEN{#1}}
+\newcommand*{\titleEN}[1]{\gdef\@titleEN{#1}}
+\newcommand*{\projectname}[1]{\gdef\@projectname{#1}}
+\newcommand*{\mail}[1]{\gdef\@mail{#1}}
+
+\newcommand{\MONTH}{\ifcase\month	\or1\or2\or3\or4\or5\or6\or7\or8\or9\or10\or11\or12\fi}
+\newcommand{\YEAR}{\number\year}
+
+
+
+
+\def\maketitlepage{%
+  \frameatpage{white}{black}{3pt} %Đóng khung trang bìa
+	
+  \cleardoublepage\thispagestyle{empty}
+  
+  %In giấy thì chọn:
+  \newgeometry{top=16mm, bottom=16mm, left=32mm, right=17.5mm} 
+  % In CD thì chọn:
+  %\newgeometry{top=23mm, bottom=23mm, left=25mm, right=24.5mm}
+    
+  \begin{center}
+  	\hfill \par
+  	\vspace{-6mm}
+   	{\normalsize \scshape \MakeUppercase {\bf\@firstuniversity} \par}
+     \vspace{-0mm}
+     {\normalsize \MakeUppercase {\bf\@seconduniversity} \par}
+    \vspace{-0mm}
+    {\normalsize \MakeUppercase {\bf~Khoa~\@faculty} \par}
+    \vspace{-0mm}
+    % {\normalsize \MakeUppercase {\bf~bộ~môn~\@department} \par}
+    % \vspace{-5mm}
+    \vfill
+    \vspace{0.5cm}
+   {\large \bfseries \textsc \@author}
+   \vspace{-1cm}
+   \vfill
+    \noindent\rule{\textwidth}{2pt} \par
+    {\LARGE \bfseries \MakeUppercase \@title \par}
+    \noindent\rule{\textwidth}{2pt} \par
+    \vfill
+    \vspace{-10mm}
+	  {\normalsize \MakeUppercase {\@reporttype} \par}
+    {\normalsize \MakeUppercase {\@projectname} \par}
+    {\normalsize \MakeUppercase {Chuyên~ngành:~\@department} \par}
+    % {\normalsize \MakeUppercase {Chuyên~ngành:~\@department} \par}
+  %   {\normalsize \MakeUppercase \@project \par}
+  %  \vspace{30mm}
+  %  {\normalsize \MakeUppercase {Giảng viên hướng dẫn} \par}
+  %  {\large \textsc \@supervisor}
+    \vfill
+    {\normalsize \bf~Thành phố Hồ Chí Minh, tháng \MONTH, năm~\YEAR \par}
+  \end{center}
+  \restoregeometry
+  \clearpage{\pagestyle{empty}\cleardoublepage}
+}
+%--------------------------------
+\def\makecoverpage{%
+  \frameatpage{white}{black}{3pt} %Đóng khung trang bìa
+	
+  \cleardoublepage\thispagestyle{empty}
+  
+  %In giấy thì chọn:
+  \newgeometry{top=16mm, bottom=16mm, left=32mm, right=17.5mm} 
+  % In CD thì chọn:
+  %\newgeometry{top=23mm, bottom=23mm, left=25mm, right=24.5mm}
+
+   \begin{center}
+  	\hfill \par
+  	\vspace{-7mm}
+   	{\normalsize \scshape \MakeUppercase {\bf\@firstuniversity} \par}
+     \vspace{-2mm}
+     {\normalsize \MakeUppercase {\bf\@seconduniversity} \par}
+    \vspace{-2mm}
+    {\normalsize \MakeUppercase {\bf~Khoa~\@faculty} \par}
+    % \vspace{-2mm}
+    % {\normalsize \MakeUppercase {\bf~bộ~môn~\@department} \par}
+    \vspace{-5mm}
+    \vfill
+    \vspace{0.5cm}
+  %  {\large \bfseries \textsc \@author}
+    \includegraphics[width=0.4\textwidth]{figure/ITR_logo_k2opt.pdf} \par
+    \vspace{0.5cm}
+    \includegraphics[width=0.25\textwidth]{figure/ICTLAB_Logo - round.pdf}
+    \vspace{-1cm}
+    \vfill
+    {\LARGE \bf {Tên đề tài:} \par}
+    \noindent\rule{\textwidth}{2pt} \par
+    {\LARGE \bfseries \MakeUppercase \@projectname \par}
+    \noindent\rule{\textwidth}{2pt} \par
+    \vfill
+    \vspace{-10mm}
+	  % {\normalsize \MakeUppercase {\@reporttype} \par}
+    {\normalsize  \MakeUppercase {Chủ nhiệm đề tài:~\@supervisor} \par}
+    {\normalsize {Mail:~\@mail} \par}
+    %{\normalsize \MakeUppercase \@project \par}
+   %\vspace{30mm}
+   % {\normalsize \MakeUppercase {Giảng viên hướng dẫn} \par}
+   % {\large \textsc \@supervisor}
+    \vfill
+    {\normalsize \bf~Thành phố Hồ Chí Minh, tháng \MONTH, năm~\YEAR \par}
+  \end{center}
+  \restoregeometry
+  \clearpage{\pagestyle{empty}\cleardoublepage}
+}
+%--------------------------------
+\def\makesubtitlepage{%
+	\cleardoublepage\thispagestyle{empty}
+	
+	%In giấy thì chọn:
+	\newgeometry{top=16mm, bottom=16mm, left=32mm, right=17.5mm} 
+	% In CD thì chọn:
+	%\newgeometry{top=23mm, bottom=23mm, left=25mm, right=24.5mm}
+	
+	\begin{center}
+		\hfill \par
+  	\vspace{-7mm}
+   	{\normalsize \scshape \MakeUppercase {\bf\@firstuniversity} \par}
+     \vspace{-0mm}
+     {\normalsize \MakeUppercase {\bf\@seconduniversity} \par}
+    \vspace{-0mm}
+    {\normalsize \MakeUppercase {\bf~Khoa~\@faculty} \par}
+		\vspace{-5mm}
+		\vfill
+  	{\normalsize \bf \MakeUppercase {\@reporttype} \par}
+        {\normalsize \bf \MakeUppercase {ngành:~\@major} \par}
+         {\normalsize \bf \MakeUppercase {Chuyên~ngành:~\@department} \par}
+		% \vspace{0.5cm}
+		\vfill
+		{\LARGE \bfseries \MakeUppercase \@title \par}
+        \vfill
+  	{\large \bfseries  Họ và tên học viên:~\@author \par}
+		{\normalsize \bfseries Mã số HV:~\@studentid}
+		\vfill
+		% \vspace{-10mm}
+   		{\normalsize \MakeUppercase {Giảng viên} \par}
+   		{\large \@supervisor}
+    		\vfill
+    		{\normalsize \bf Thành phố Hồ Chí Minh, tháng~\MONTH, năm~\YEAR \par}
+	\end{center}
+	\restoregeometry
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+}
+% TRANG GHI HỘI ĐỒNG
+\def\makeassesspage{%
+	\cleardoublepage\thispagestyle{empty}
+	%In giấy thì chọn:
+	\newgeometry{top=16mm, bottom=16mm, left=32mm, right=17.5mm} 
+	% In CD thì chọn:
+	%\newgeometry{top=23mm, bottom=23mm, left=25mm, right=24.5mm}
+	\begin{flushleft}
+		\hfill \par
+		{\large \bfseries {\MakeUppercase\@title} \par}
+		% \vspace{1em}
+        {\bfseries Tên tiếng Anh:~\@titleEN \par}
+        \vspace{1em}
+% Please add the following required packages to your document preamble:
+		\vspace{-10mm}
+	\end{flushleft}
+ \begin{center}
+\vspace{5em}
+\begin{table}[h]
+\begin{tabularx}{\textwidth}{llllXcXXX}
+\multicolumn{9}{l}{Sinh viên:~\@author} \\
+\multicolumn{9}{l}{Người hướng dẫn:~\@supervisor} \\
+\multicolumn{9}{l}{Hội đồng đánh giá:} \\
+1. Chủ tịch & : &TS.~Trần~Thị~Thảo~Nguyên&  &  & xác nhận: &  &  &  \\
+2. Thư ký & : &ThS.~Nguyễn~Thái~Công~Nghĩa&  &  & xác nhận: &  &  &  \\
+3. Ủy viên & : &ThS.~Ngô~Đắc~Thuần&  &  &  &  &  &  \\
+\end{tabularx}
+\end{table}
+ \end{center}
+	\restoregeometry
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+}
+
+
+
+% Đóng khung trang bìa
+\usepackage{xcolor}
+\usepackage{eso-pic}
+\usepackage{lipsum}
+\newdimen\extraxsep
+\newdimen\extraysep
+\extraxsep=6mm
+\extraysep=3mm
+
+\newcommand\frameatpage[3]{%
+	\linethickness{#3}%
+	\AddToShipoutPicture*{%
+		\AtTextLowerLeft{%%text-boder
+			\put(\LenToUnit{-,5\extraxsep},\LenToUnit{-0.5\extraysep}){\color{#1}%
+				\rule{\dimexpr\textwidth+\extraxsep\relax}{\dimexpr\textheight+\extraysep\relax}}%
+			\put(\LenToUnit{-,5\extraxsep},\LenToUnit{-0.5\extraysep}){\color{#2}%
+				\framebox(\LenToUnit{\dimexpr\textwidth+\extraxsep\relax},%
+				\LenToUnit{\dimexpr\textheight+\extraysep\relax}){}
+			}
+		}%
+	}%
+}
+
+%%%
+%%% Page Style
+%%%
+\advance\headheight1em
+\advance\footskip2ex
+% \lhead[\leftmark]{\includegraphics[height=1.3cm]{figure/ICTLAB_Logo_withName.pdf}}
+\lhead[\fancyplain{}{\leftmark}]{\fancyplain{}{}}
+\rhead[\fancyplain{}{}]{\fancyplain{}{\rightmark}}
+\chead{}
+\cfoot{thepage}
+\pagestyle{fancyplain}
+
+\advance\headheight.5ex
+%\clearpage{\pagestyle{empty}\cleardoublepage}
+%\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+  \hbox{}
+  \thispagestyle{empty}
+  \newpage
+  \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+%\makeatother
+
+\def\reportSum{
+  \chapter*{\begin{center} BÁO CÁO TÓM TẮT \end{center}}
+  % \tilde{Tóm tắt}
+  % \addcontentsline{toc}{chapter}{BÁO CÁO TÓM TẮT}
+}
+
+\def\postreportSum{%
+  \vspace{-6em}
+  \begin{center} \today \end{center}
+
+  % \clearpage{\pagestyle{empty}\cleardoublepage}
+}
+
+\def\Appendix{
+  \chapter*{\begin{center} MINH CHỨNG SẢN PHẨM \end{center}}
+  % \tilde{Tóm tắt}
+  % \addcontentsline{toc}{chapter}{BÁO CÁO TÓM TẮT}
+}
+
+\def\postAppendix{%
+  \vspace{-6em}
+  \begin{center} \today \end{center}
+
+  % \clearpage{\pagestyle{empty}\cleardoublepage}
+}
+
+\def\abstractVN{%
+%  \frontmatter
+  \chapter*{\begin{center}Tóm tắt\end{center}}
+  \vspace{-6em}
+  % \tilde{Tóm tắt}
+  \addcontentsline{toc}{chapter}{Tóm tắt}
+  \pagenumbering{roman}
+}
+
+\def\postabstractVN{%
+  \begin{flushright} Tháng~\MONTH\ năm \YEAR \\ \@author \end{flushright}
+  \clearpage{\pagestyle{empty}\cleardoublepage}
+}
+
+\def\abstractEng{%
+%  \frontmatter
+  \chapter*{\begin{center}Abstract\end{center}} 
+  \vspace{-6em}
+  \addcontentsline{toc}{chapter}{Abstract}
+  % \pagenumbering{roman}
+}
+
+\def\postabstractEng{%
+  \begin{flushright} \monthname,~\YEAR \\ \@authorEN \end{flushright}
+  \clearpage{\pagestyle{empty}\cleardoublepage}
+}
+
+\def\acknowledgement{%
+  \chapter*{\begin{center}LỜI CẢM ƠN \end{center}}
+  \vspace{-6em}
+  \addcontentsline{toc}{chapter}{LỜI CẢM ƠN}
+  \pagenumbering{roman}
+}
+
+\def\postackEng{%
+  \begin{flushright} TP. HCM. \today \\ Chủ nhiệm đề tài \\ \hfill \\ \hfill \\ TS. Trần Thị Thảo Nguyên \end{flushright}
+  \clearpage{\pagestyle{empty}\cleardoublepage}
+}
+
+\newcommand{\toc}{%
+  \tableofcontents
+  \clearpage{\pagestyle{empty}\cleardoublepage}
+  \let\oldnumberline\numberline%
+  \renewcommand{\numberline}{\figurename~\oldnumberline}%  
+  \listoffigures
+  \addcontentsline{toc}{chapter}{\listfigurename}
+  \clearpage{\pagestyle{empty}\cleardoublepage}
+  \renewcommand{\numberline}{\tablename~\oldnumberline}%
+  \listoftables
+  \addcontentsline{toc}{chapter}{\listtablename}
+  % \mainmatter
+  \clearpage{\pagestyle{empty}\cleardoublepage}
+  \printglossary[type=\acronymtype, title=Danh sách chữ viết tắt, nonumberlist=true, style=altlong4colwithindent] 
+  % \addcontentsline{toc}{chapter}{Danh sách chữ viết tắt}
+  \cleardoublepage
+  \pagenumbering{arabic}
+  \setcounter{page}{1}
+}
+
+%%%
+%%%  bibliography
+%%%
+\renewenvironment{thebibliography}[1]
+{\chapter*{\bibname\@mkboth{\bibname}{\bibname}}
+ \addcontentsline{toc}{chapter}{\bibname}
+   \list{\@biblabel{\@arabic\c@enumiv}}
+        {\settowidth\labelwidth{\@biblabel{#1}}
+         \leftmargin\labelwidth
+         \advance\leftmargin\labelsep
+         \@openbib@code
+         \usecounter{enumiv}
+         \let\p@enumiv\@empty
+         \renewcommand\theenumiv{\@arabic\c@enumiv}}
+   \sloppy
+   \clubpenalty4000
+   \@clubpenalty\clubpenalty
+   \widowpenalty4000
+   \sfcode`\.\@m}
+  {\def\@noitemerr
+    {\@latex@warning{Empty `thebibliography' environment}}
+   \endlist}
+
+%%%
+
+
+%%%
+%%%  glossary
+%%%
+\usepackage[toc,acronym]{glossaries}
+
+\include{glossary}
+
+\makeglossaries 
+\renewcommand{\glsnamefont}[1]{\textbf{#1}}
+
+\newcommand*{\myglossaryindent}{0.65cm} 	
+\newcommand*{\myglsdescwidth}{10cm} 			
+\newglossarystyle{altlong4colwithindent}
+{
+   \setglossarystyle{altlong4col}
+   \renewenvironment{theglossary}
+     {\begin{longtable}[l]{@{\hspace{\myglossaryindent}}lp{\myglsdescwidth}lp{\glspagelistwidth}@{}}}
+     {\end{longtable}}
+}
+
+\newcommand\acrfullvn[2][]{\acrlong[#1]{#2} -- \acrshort[#1]{#2}}

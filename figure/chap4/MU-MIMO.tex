@@ -1,0 +1,154 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}[scale = 1]
+
+\definecolor{darkturquoise0191191}{RGB}{0,191,191}
+\definecolor{darkviolet1910191}{RGB}{191,0,191}
+\definecolor{goldenrod1911910}{RGB}{191,191,0}
+\definecolor{green01270}{RGB}{0,127,0}
+\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{darktangerine}{RGB}{1.0, 0.66, 0.07}
+
+\begin{axis}[
+legend cell align={left},
+legend columns=2,
+legend style={
+  fill opacity=0.8,
+  draw opacity=1,
+  text opacity=1,
+  at={(0.01,0.15)},
+  anchor=west,
+  draw=lightgray204
+},
+log basis y={10},
+tick pos=left,
+xlabel={SNR [dB]},
+xmajorgrids,
+xmin=9.5, xmax=20.5,
+xminorgrids,
+xtick style={color=black},
+ylabel={BER},
+ymajorgrids,
+ymin=9.28649163113646e-06, ymax=0.572645816836016,
+yminorgrids,
+ymode=log,
+ytick style={color=black},
+% ytick={1e-05,0.0001,0.001,0.01,0.1,1,10},
+% yticklabels={
+%   \(\displaystyle {10^{-5}}\),
+%   \(\displaystyle {10^{-4}}\),
+%   \(\displaystyle {10^{-3}}\),
+%   \(\displaystyle {10^{-2}}\),
+%   \(\displaystyle {10^{-1}}\),
+%   \(\displaystyle {10^{0}}\),
+%   \(\displaystyle {10^{1}}\)
+% }
+]
+\addplot [semithick, dashed, blue, mark=o, mark size=3, mark options={solid}]
+table {%
+10 0.495759402929494
+12 0.493089219215492
+14 0.484774515888779
+16 0.462454288728898
+18 0.41964957795432
+20 0.367778891509434
+};
+\addlegendentry{\scriptsize STA=4, NRx=4}
+\addplot [semithick, blue, mark=o, mark size=3, mark options={solid}]
+table {%
+10 0.487141633565045
+12 0.462870562313803
+14 0.393067744538232
+16 0.272607032025819
+18 0.162863424776564
+20 0.0931232311320755
+};
+\addlegendentry{\scriptsize STA=4, NRx=8}
+% \addplot [semithick, dashed, darkviolet1910191, mark=x, mark size=3, mark options={solid}]
+% table {%
+% 10 0.496456926514399
+% 12 0.493548336643496
+% 14 0.486620456802383
+% 16 0.470138257199603
+% 18 0.44634957795432
+% 20 0.412961146971202
+% };
+% \addlegendentry{\scriptsize STA=5, NRx=4}
+% \addplot [semithick, darkviolet1910191, mark=x, mark size=3, mark options={solid}]
+% table {%
+% 10 0.48865367428004
+% 12 0.469117154915591
+% 14 0.409146027805362
+% 16 0.310444935451837
+% 18 0.206696623634558
+% 20 0.13252323733863
+% };
+% \addlegendentry{\scriptsize STA=5, NRx=8}
+\addplot [semithick, dashed, darkviolet1910191, mark=x, mark size=3, mark options={solid}]
+table {%
+10 0.497733594008606
+12 0.496036060079444
+14 0.492732187189672
+16 0.485523191823899
+18 0.472735807679576
+20 0.457692506620324
+};
+\addlegendentry{\scriptsize STA=6, NRx=4}
+\addplot [semithick, darkviolet1910191, mark=x, mark size=3, mark options={solid}]
+table {%
+10 0.493223518702416
+12 0.484519157563721
+14 0.454731980304535
+16 0.391884082257531
+18 0.314623965574313
+20 0.235754613538563
+};
+\addlegendentry{\scriptsize STA=6, NRx=8}
+% \addplot [semithick, dashed, green01270, mark=square, mark size=3, mark options={solid,rotate=180}]
+% table {%
+% 10 0.498135675273088
+% 12 0.496128670733437
+% 14 0.494529401333522
+% 16 0.489265534118315
+% 18 0.481894240317776
+% 20 0.473643513264293
+% };
+% \addlegendentry{\scriptsize STA=7, NRx=4}
+% \addplot [semithick, green01270, mark=square, mark size=3, mark options={solid,rotate=90}]
+% table {%
+% 10 0.494164757412399
+% 12 0.48773221378919
+% 14 0.466358118172791
+% 16 0.425929475812172
+% 18 0.371793587742942
+% 20 0.309308678535963
+% };
+% \addlegendentry{\scriptsize STA=7, NRx=8}
+\addplot [semithick, dashed, darkturquoise0191191, mark=triangle, mark size=3, mark options={solid}]
+table {%
+10 0.498238021350546
+12 0.49737166397716
+14 0.496360430114201
+16 0.494041506330685
+18 0.488708974677259
+20 0.484506501365442
+};
+\addlegendentry{\scriptsize STA=8, NRx=4}
+\addplot [semithick, darkturquoise0191191, mark=triangle, mark size=3, mark options={solid}]
+table {%
+10 0.495683915714995
+12 0.491379499751738
+14 0.481505678997021
+16 0.458321577085402
+18 0.419660625620655
+20 0.37813781653426
+};
+\addlegendentry{\scriptsize STA=8, NRx=8}
+\addplot [ultra thick, loosely dashed, darktangerine, forget plot]
+table {%
+9.5 0.001
+20.5 0.001
+};
+\node[] at (axis cs: 13,1.5e-3) {BER tham chiếu};
+\end{axis}
+
+\end{tikzpicture}

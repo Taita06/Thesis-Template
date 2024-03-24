@@ -1,0 +1,93 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+\definecolor{darkturquoise0191191}{RGB}{0,191,191}
+\definecolor{darkviolet1910191}{RGB}{191,0,191}
+\definecolor{green01270}{RGB}{0,127,0}
+\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{darktangerine}{RGB}{1.0, 0.66, 0.07}
+
+\begin{axis}[
+legend cell align={left},
+legend style={
+  fill opacity=0.8,
+  draw opacity=1,
+  text opacity=1,
+  at={(0.03,0.03)},
+  anchor=south west,
+  draw=lightgray204
+},
+log basis y={10},
+tick pos=left,
+xlabel={SNR [dB]},
+xmajorgrids,
+xmin=9.5, xmax=20.5,
+xminorgrids,
+xtick style={color=black},
+ylabel={BER},
+ymajorgrids,
+ymin=2.16482046582444e-05, ymax=0.513035557901541,
+yminorgrids,
+ymode=log,
+ytick style={color=black},
+% ytick={1e-06,1e-05,0.0001,0.001,0.01,0.1,1,10},
+% yticklabels={
+%   \(\displaystyle {10^{-6}}\),
+%   \(\displaystyle {10^{-5}}\),
+%   \(\displaystyle {10^{-4}}\),
+%   \(\displaystyle {10^{-3}}\),
+%   \(\displaystyle {10^{-2}}\),
+%   \(\displaystyle {10^{-1}}\),
+%   \(\displaystyle {10^{0}}\),
+%   \(\displaystyle {10^{1}}\)
+% }
+]
+\addplot [semithick, blue, mark=o, mark size=3, mark options={solid}]
+table {%
+10 0.342706880040323
+12 0.273475378024194
+14 0.217120236895161
+16 0.18451154233871
+18 0.163001108870968
+20 0.154058669354839
+};
+\addlegendentry{Số lần lặp = 1}
+\addplot [semithick, darkviolet1910191, mark=triangle, mark size=3, mark options={solid}]
+table {%
+10 0.22259236391129
+12 0.103527570564516
+14 0.0351042842741935
+16 0.0120323588709677
+18 0.00708961693548387
+20 0.00545539314516129
+};
+\addlegendentry{Số lần lặp = 2}
+\addplot [semithick, darkturquoise0191191, mark=diamond, mark size=3, mark options={solid}]
+table {%
+10 0.196327394153226
+12 0.0706490675403226
+14 0.0148261340725806
+16 0.00169695060483871
+18 0.000602318548387097
+20 0.000296421370967742
+};
+\addlegendentry{Số lần lặp = 4}
+\addplot [semithick, green01270, mark=square, mark size=3, mark options={solid}]
+table {%
+10 0.194996824596774
+12 0.0680136088709677
+14 0.0130689516129032
+16 0.00123087197580645
+18 0.000225478830645161
+20 0.000107258064516129
+};
+\addlegendentry{Số lần lặp = 8}
+\addplot [ultra thick, loosely dashed, darktangerine, forget plot]
+  table {%
+  9.5 0.001
+  20.5 0.001
+  };
+  \node[] at (axis cs: 12, 1.5e-3) {BER tham chiếu};
+\end{axis}
+
+\end{tikzpicture}

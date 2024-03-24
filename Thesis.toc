@@ -1,0 +1,20 @@
+\babel@toc {vietnamese}{}\relax 
+\contentsline {chapter}{Tóm tắt}{i}{chapter*.1}%
+\contentsline {chapter}{Abstract}{iii}{chapter*.2}%
+\contentsline {chapter}{Danh s\'ach h\`inh v\~e}{vii}{chapter*.4}%
+\contentsline {chapter}{Danh s\'ach b\h {a}ng}{ix}{chapter*.5}%
+\contentsline {chapter}{Danh sách chữ viết tắt}{xi}{section*.6}%
+\contentsline {chapter}{\numberline {1}TỔNG QUAN}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}TỔNG QUAN HỆ THỐNG IDMA}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Kiến trúc bộ phát}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Kiến trúc bộ thu}{5}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Elementary Signal Estimator}{5}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Khối DEC}{9}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Cập nhật giá trị trung bình và phương sai}{9}{subsection.2.2.3}%
+\contentsline {chapter}{\numberline {3}ĐỀ XUẤT OFDMA-IDMA DỰA TRÊN CHUẨN 802.11AX}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Mô hình phía phát}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Mô hình phía thu}{11}{section.3.2}%
+\contentsline {chapter}{\numberline {4}KẾT QUẢ HIỆU NĂNG MÔ PHỎNG}{13}{chapter.4}%
+\contentsline {chapter}{\numberline {5}KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}{17}{chapter.5}%
+\contentsline {chapter}{Các công trình công bố}{19}{chapter*.16}%
+\contentsline {chapter}{Tài liệu tham khảo}{21}{chapter*.17}%

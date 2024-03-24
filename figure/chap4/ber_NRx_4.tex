@@ -1,0 +1,100 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+\definecolor{darkturquoise0191191}{RGB}{0,191,191}
+\definecolor{darkviolet1910191}{RGB}{191,0,191}
+\definecolor{green01270}{RGB}{0,127,0}
+\definecolor{lightgray204}{RGB}{204,204,204}
+
+\begin{axis}[
+legend cell align={left},
+legend style={
+  fill opacity=0.8,
+  draw opacity=1,
+  text opacity=1,
+  at={(0.03,0.03)},
+  anchor=south west,
+  draw=lightgray204
+},
+log basis y={10},
+tick pos=left,
+xlabel={SNR [dB]},
+xmajorgrids,
+xmin=9.5, xmax=20.5,
+xminorgrids,
+xtick style={color=black},
+ylabel={BER},
+ymajorgrids,
+ymin=0.000134326406713529, ymax=0.653111661234894,
+yminorgrids,
+ymode=log,
+ytick style={color=black},
+% ytick={1e-05,0.0001,0.001,0.01,0.1,1,10},
+yticklabels={
+  \(\displaystyle {10^{-5}}\),
+  \(\displaystyle {10^{-4}}\),
+  \(\displaystyle {10^{-3}}\),
+  \(\displaystyle {10^{-2}}\),
+  \(\displaystyle {10^{-1}}\),
+  \(\displaystyle {10^{0}}\),
+  \(\displaystyle {10^{1}}\)
+}
+]
+\addplot [semithick, dashed, blue, mark=o, mark size=3, mark options={solid}]
+table {%
+10 0.105542086693548
+12 0.03317578125
+14 0.00980342741935484
+16 0.00330323840725806
+18 0.000451108870967742
+20 0.00019758064516129
+};
+\addlegendentry{User-8-NRx-4 }
+\addplot [semithick, dashed, darkviolet1910191, mark=x, mark size=3, mark options={solid}]
+table {%
+10 0.219595619119624
+12 0.109079238071237
+14 0.0406001554099462
+16 0.0118438760080645
+18 0.00307266465053763
+20 0.000739961357526882
+};
+\addlegendentry{User-12-NRx-4}
+\addplot [semithick, dashed, darkturquoise0191191, mark=asterisk, mark size=3, mark options={solid}]
+table {%
+10 0.332619392641129
+12 0.215368353074597
+14 0.111528698336694
+16 0.0383162802419355
+18 0.0126934538810484
+20 0.00474168346774194
+};
+\addlegendentry{User-16-NRx-4}
+\addplot [semithick, dashed, green01270, mark=square, mark size=3, mark options={solid}]
+table {%
+10 0.404963205645161
+12 0.324013810483871
+14 0.212407308467742
+16 0.116323966733871
+18 0.0588404737903226
+20 0.032302091733871
+};
+\addlegendentry{User-20-NRx-4}
+\addplot [semithick, dashed, red, mark=diamond, mark size=3, mark options={solid}]
+table {%
+10 0.44402194640457
+12 0.391929918514785
+14 0.31088970094086
+16 0.21369783266129
+18 0.145292023689516
+20 0.115868048555108
+};
+\addlegendentry{User-24-Rx-4 }
+\addplot [semithick, red, forget plot]
+table {%
+9.5 0.001
+20.5 0.001
+};
+\end{axis}
+
+\end{tikzpicture}

@@ -1,0 +1,96 @@
+Các kết quả của mô hình OFDMA-IDMA đề xuất được mô phỏng và đánh giá để đánh giá hiệu suất so với các kỹ thuật hiện có trong 802.11ax. Các tham số mô hình OFDMA-IDMA chi tiết được nêu trong Bảng \ref{tab:Para}. Bội số SF sẽ giảm số bit dữ liệu để điều chỉnh kích thước gói của hệ thống OFDMA-IDMA theo tiêu chuẩn 802.11.
+
+\begin{table}[H]
+    \normalsize
+    \centering
+    \caption{Thông số mô phỏng}
+    \label{tab:Para}
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Parameters}         & \textbf{Value}    \\ \hline
+    Mô hình kênh                & TGax Channel Model B    \\ \hline
+    Băng thông                  & 20 MHz            \\ \hline
+    Số lượng RU chơ IDMA        & 4                 \\ \hline
+    Số lượng STA                & 8, 12, 16, 20, 24 \\ \hline
+    Hệ số trải (SF)             & 2                 \\ \hline
+    Kiểu điều chế               & 16-QAM            \\ \hline
+    Số lượng ăng-ten thu        & 4, 8              \\ \hline
+    Số vòng lặp                 & 4                 \\ \hline
+    Mã hóa kênh                 & LDPC              \\ \hline
+    Packet length               & 1000 Bytes        \\ \hline
+    Số lượng lặp mô phỏng       & 1000              \\ \hline
+    \end{tabular}
+\end{table}
+%=====================
+Hình \ref{fig:IT} cho thấy sự tác động của số lần lặp đến hiệu suất BER của OFDMA-IDMA. Khi số lần lặp tăng lên, BER được cải thiện rõ rệt. Tuy nhiên, điều cần thiết là phải xem xét sự đánh đổi với độ trễ, độ trễ có xu hướng tăng tuyến tính theo số lần lặp, để tạo sự cân bằng giữa độ trễ và chất lượng tín hiệu là rất quan trọng.
+Đối với 802.11 \acrshort{OFDM} PHY, lý tưởng nhất là quá trình nhận phải được hoàn thành trong vòng 16 $\mu s$. Xem xét các yếu tố thực tế, bao gồm độ trễ xử lý đường truyền và \acrshort{MAC}, độ trễ xử lý mục tiêu nhận khoảng 10 $\mu s$ được khuyến nghị trong \cite{UL-OFDM-IDMA}.
+Các tác giả này đã nghiên cứu mối quan hệ giữa số lần lặp và độ trễ trong các kịch bản OFDM-IDMA. Đối với SF bằng 2, độ trễ của hệ thống là khoảng 6 $\mu s$ cho 4 lần lặp, trong khi nó vượt quá 10 $\mu s$ cho 8 lần lặp. Do đó, báo cáo này đã chọn ra 4 lần lặp lại là một sự thỏa hiệp phù hợp để đáp ứng các yêu cầu về chất lượng và độ trễ.
+
+\begin{figure}
+    \pgfplotsset{width=0.75\linewidth,height=10cm,
+        x label style={at={(axis description cs:0.5 , -0.05)},anchor=north},
+        y label style={at={(axis description cs:-0.125, 0.5)},anchor=south},
+        xmajorgrids,
+        ymajorgrids,
+    }
+    \pgfplotsset{yticklabel style={text width=2em,align=right}}
+    \centering
+        \input{figure/chap4/IT-change.tex}
+    \caption{Ảnh hưởng của số lần lặp với STA = 20, NRx = 8.}
+    \label{fig:IT}
+    % \vspace{-1em}
+\end{figure}
+%==========================
+
+Hình \ref{fig:bersec4} mô tả BER trung bình cho các kỹ thuật 802.11ax sử dụng bộ cân bằng Lỗi bình phương trung bình tối thiểu (\acrshort{MMSE}) ở bộ thu với số lượng STA và ăng-ten thu (NRx) khác nhau trong băng thông 20 MHz.
+Hình \ref{fig:BER MU-MIMO} thể hiện BER của kỹ thuật MU-MIMO có thể thấy được MU-MIMO rất nhạy cảm với nhiễu MAI. Ngay cả trong điều kiện tối ưu với 4 STA được truyền tới AP 8 ăng-ten, việc đạt được BER tham chiếu vẫn còn khó khăn.
+Hình \ref{fig:BER OFDMA} minh họa BER của OFDMA, cho thấy ảnh hưởng MAI giảm khi STA truyền trong các RU khác nhau. Đối với 4 STA và NRx là 8, BER giảm xuống dưới $10^{-3}$ ở mức 20~[dB]. Tuy nhiên, khi số lượng STA tăng lên thì BER của OFDMA cũng tăng do nhiễu tích lũy tăng lên. Lý do là tỷ lệ giữa số điểm FFT với số lượng sóng mang trên mỗi RU sẽ tăng khi số lượng STA tăng, dẫn đến hiệu ứng tích lũy nhiễu sẽ lớn hơn khi số lượng STA tăng.
+Hình \ref{fig:BER OFDMA-MU-MIMO} hiển thị BER trung bình của OFDMA-MU-MIMO với trường hợp số RU là 2, đây là kích thước RU tối thiểu để triển khai OFDMA-MU-MIMO ở 20 MHz trong 802.11ax \cite{IEEEStd}. Mặc dù OFDMA-MU-MIMO mang lại hiệu suất phổ cao hơn OFDMA khi số lượng STA tăng lên, nhưng nó phải đối mặt với những thách thức trong việc đạt được BER tham chiếu, nhưng BER của nó vẫn vượt trội hơn so với phương án sử dụng MU-MIMO.
+
+Hình \ref{fig:BER OFDMA-IDMA} minh họa BER trung bình trong OFDMA-IDMA được đề xuất với 4 RU. Có thể thấy tốc độ dữ liệu của OFDMA-IDMA sẽ giảm đi một nửa so với các kỹ thuật khác nêu trên khi chọn SF là 2, tuy nhiên chất lượng và số lượng STA tăng lên đáng kể so với các kỹ thuật đó. Khi đặt cạnh trường hợp chia RU và nhiều STA trong một RU như được mô tả trong Hình \ref{fig:BER OFDMA-MU-MIMO}, kỹ thuật OFDMA-IDMA được đề xuất sẽ vượt trội hơn. Xem xét trường hợp tốt nhất của OFDMA-MU-MIMO với 4 STA và 8 ăng-ten thu (STA~=~4, NRx = 8), BER xấp xỉ $10^{-2}$ tại SNR~=~20 [dB]. Tuy nhiên, đối với ba kỹ thuật trong hình \subref{fig:BER MU-MIMO}, \subref{fig:BER OFDMA}, \subref{fig:BER OFDMA-MU-MIMO}, giả sử việc đánh đổi việc giảm tốc độ bằng một nửa tốc độ dữ liệu và nhân đôi số lượng STA là hợp lý, vì vậy trường hợp tốt nhất OFDMA-IDMA (STA = 8 , NRx~=~8) đạt được hầu như không có lỗi ở SNR~=~20 [dB]. Tuy nhiên, so với OFDMA thông thường, trong đó trường hợp tốt nhất (STA~=~4, NRx = 8) mang lại BER khoảng $3\mathord{\times}10^{-4}$ tại SNR~=~20 [dB] đạt được BER tham chiếu thì rõ ràng OFDMA-IDMA vẫn cho kết quả tốt hơn nhiều (STA~=~8, NRx = 8).
+Ngoài ra, kỹ thuật đề xuất còn triển khai MU đường lên trong 4 RU, điều mà MU-MIMO không thể đạt được trong 802.11ax. Về mặt hiệu quả phổ tần, việc triển khai OFDMA-IDMA ở 4 RU sẽ giảm hai lần so với 2 RU như MU-MIMO, nhưng chất lượng truyền dẫn cũng như số lượng STA sẽ tăng lên đáng kể.
+Sự đánh đổi này đáng được xem xét trong trường hợp OFDMA-MU-MIMO tốt nhất (STA = 4, NRx = 8); BER của kỹ thuật này vẫn chưa thể đạt tới ngưỡng tham chiếu ở mức 20 dB. Đối với OFDMA-IDMA, khi xem xét tăng số lượng STA lên 20, BER vẫn xấp xỉ $3\mathord{\times}10^{-4}$, nghĩa là mặc dù tốc độ dữ liệu hoặc hiệu suất phổ giảm đi một nửa, số lượng STA tăng gấp 5 lần so với OFDMA. Ngay cả khi xem xét trường hợp STA~=~24 và Nrx = 8, BER của OFDMA-IDMA vẫn tiếp cận mức tham chiếu, cho thấy số lượng STA tăng gấp sáu lần so với trường hợp tốt nhất của OFDMA-MU-MIMO.
+
+
+\begin{figure}
+    \centering
+    \pgfplotsset{width=\linewidth,height=10cm,
+        x label style={at={(axis description cs:0.5 , -0.1)},anchor=north},
+        y label style={at={(axis description cs:-0.2, 0.5)},anchor=south},
+        xmajorgrids,
+        ymajorgrids,
+    }
+    \pgfplotsset{yticklabel style={text width=2em,align=right}}
+
+    \begin{subfigure}[]{0.45\linewidth}
+        \input{figure/chap4/MU-MIMO.tex}
+        \vspace{-1.5em}
+        \caption{BER của MU-MIMO.}\label{fig:BER MU-MIMO}
+    \end{subfigure}
+    \begin{subfigure}[]{0.45\linewidth}
+        \input{figure/chap4/OFDMA.tex}
+        \vspace{-1.5em}
+        \caption{BER của OFDMA.}\label{fig:BER OFDMA}
+    \end{subfigure}
+
+    \vspace{1cm}
+    %================================
+    \begin{subfigure}[]{0.45\linewidth}
+        \input{figure/chap4/fig.tex}
+        \vspace{-1.5em}
+     \caption{BER của OFDMA-MU-MIMO.} \label{fig:BER OFDMA-MU-MIMO}  
+    \end{subfigure} 
+    \begin{subfigure}[]{0.45\linewidth}
+        \input{figure/chap4/berNRx8.tex}
+        \vspace{-0.25em}
+     \caption{BER của OFDMA-IDMA.} \label{fig:BER OFDMA-IDMA}  
+    \end{subfigure} 
+
+    \caption{Hiệu suất BER trung bình giữa các kỹ thuật.}\label{fig:bersec4}
+    \vspace{1.51em}
+\end{figure}
+% Although the reference BER is achieved, it is clear that OFDMA-IDMA still gives much better results (STA = 8, NRx = 8). In addition, when considering increasing the number of STAs to 20, the BER is still approximately $3\mathord{\times}10^{-4}$, meaning that even though the data rate is reduced by half, the number of STAs is increased 5 times compared to OFDMA.
+
+% Figure \ref{fig:IT} shows the effect of the number of iterations on the BER performance of the proposed OFDMA-IDMA. The rising iteration number can reach a better BER. However, the latency must increase linearly with the number of iterations. Therefore, to ensure both latency and quality, the number of iterations chosen is 4, which gives the BER below the reference BER, and the latency will be below 10 $\mu s$ mentioned in \cite{UL-OFDM-IDMA}.
+
+% In this context, four iterations are made. This selection yields a BER below the reference threshold and ensures that the latency remains within the specified threshold of 10 $\mu s$ discussed in \cite{UL-OFDM-IDMA}.

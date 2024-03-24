@@ -1,0 +1,386 @@
+% Điều chỉnh bởi TS. Nguyen Viet Ha, FETEL, HCMUS
+% Ngày điều chỉnh: 07/02/2018
+
+%       inch    = 25.4 mm
+%       pt      = 1/72.27 inch  => 0.3515 mm            # point
+%       bp      = 1/72 inch     => 0.35277... mm        # big point
+%       pc      = 12pt          => 4.2175 mm            # pica
+
+%%%
+%%% Lists
+%%%
+
+\newdimen\rightmargini
+\newdimen\rightmarginii
+\newdimen\rightmarginiii
+\newdimen\rightmarginiv
+\newdimen\rightmarginv
+\newdimen\rightmarginvi
+
+
+%%% description
+%\def\flatlistlabel#1{\bf #1\hfill}
+\def\flatlistlabel#1{\sf #1\hfill}
+\def\description{%
+    %\vskip3mm%
+    \list{}{\labelwidth3cm%
+        \advance\itemsep-2mm%
+        \advance\leftmargin\labelwidth%
+%       \advance\rightmargin\rightskip%
+        \advance\rightmargin%
+            \csname \rightmargin\romannumeral\the\@listdepth\endcsname%
+        \let\makelabel\flatlistlabel\itemindent0pt\listparindent1mm}}
+\def\enddescription{%
+    \endlist%
+    %\vskip3mm%
+        }
+
+
+%%% itemize
+\def\itemize{%
+    \ifnum \@itemdepth >3 \@toodeep%
+    \else%
+            \advance\@itemdepth \@ne%
+        \edef\@itemitem{labelitem\romannumeral\the\@itemdepth}%
+        \list%
+            {\csname\@itemitem\endcsname}%
+            {%
+                \def\makelabel##1{\hss\llap{##1}}%
+                \advance\itemsep-2mm%
+                \advance\rightmargin%
+                    \csname rightmargin\romannumeral\the\@listdepth\endcsname%
+            }%
+    \fi%
+}
+
+
+%%% enumerate
+\def\enumerate{%
+    %\vskip3mm%
+    \ifnum \@enumdepth >3 \@toodeep%
+    \else%
+        \advance\@enumdepth \@ne%
+        \edef\@enumctr{enum\romannumeral\the\@enumdepth}%
+        \list%
+            {\csname label\@enumctr\endcsname}%
+            {%
+                \usecounter{\@enumctr}%
+                \def\makelabel##1{\hss\llap{##1}}%
+                %
+                \advance\itemsep-2mm%
+                \advance\rightmargin%
+                    \csname rightmargin\romannumeral\the\@listdepth\endcsname%
+            }%
+    \fi%
+}
+\def\endenumerate{%
+    \endlist%
+    %\vskip3mm%
+}
+
+
+% Header - Footer
+  \lhead[\fancyplain{}{\leftmark}]{\fancyplain{}{}}
+  \rhead[\fancyplain{}{}]{\fancyplain{}{\rightmark}}
+  \chead{}
+  
+  \lfoot[\thepage]{}
+  \rfoot[]{\thepage}
+  \cfoot{}
+
+\newdimen\midashi
+\newdimen\samplemidashi
+
+\def\stretchlabel#1#2{%
+  \setbox\@tempboxa\hbox{\vrule width#1}\samplemidashi\wd\@tempboxa\relax%
+  \setbox\@tempboxa\hbox{#2}\midashi\wd\@tempboxa\relax%
+  \ifdim\midashi>\samplemidashi{#2}%
+  \else\vbox{%
+    \kanjiskip=.5mm\relax%
+    \xkanjiskip=\kanjiskip%
+    \spaceskip=\kanjiskip%
+    \xspaceskip=\kanjiskip%
+    #2}%
+  \fi%
+}
+
+\def\xstretchlabel#1#2{%
+  \setbox\@tempboxa\hbox{\vrule width#1}\samplemidashi\wd\@tempboxa\relax%
+  \setbox\@tempboxa\hbox{#2}\midashi\wd\@tempboxa\relax%
+  \ifdim\midashi>\samplemidashi{#2}%
+  \else\hbox{%
+    \kanjiskip=.5mm\relax%
+    \xkanjiskip=\kanjiskip%
+    \spaceskip=\kanjiskip%
+    \xspaceskip=\kanjiskip%
+    #2}%
+  \fi%
+}
+
+%%%
+%%% Chapter Head
+%%%
+
+\def\oldone@makechapterhead#1{%
+ \vspace*{0pt}%
+ {%
+  \parindent 0pt \raggedright 
+  \hrule width \textwidth height 1pt
+  \vskip 17pt
+  \centerline{%
+   \ifnum \c@secnumdepth >\m@ne \Huge\bf \@chapapp{\thechapter} \fi%
+  \Huge\bf #1}
+  \par \nobreak
+  \vskip 12pt
+  \hrule width \textwidth height 1pt
+  \vskip 40pt 
+ }
+}
+
+\def\yetanother@makechapterhead#1{%
+ \vspace*{20pt}%
+ {%
+  \parindent 0pt \raggedright 
+  \ifnum \c@secnumdepth >\m@ne \Huge\bf \@chapapp{} \thechapter\space \ \fi
+%  \ifnum \c@secnumdepth >\m@ne {\huge\bf $BBh(B\space\thechapter $B>O(B\space} \fi
+  \\{\huge\bf #1}\par
+  \nobreak \vskip 20pt
+ }
+}
+
+%               ==========================
+%               || Chapter N
+%               || YYYYYYYYYYYYYYYYYYYYYY
+
+\def\newK@makechapterhead#1{%
+  \vspace*{10pt}
+  \hspace{-0.05\textwidth}%
+  \begin{tabular}{||@{\hspace{0.05\textwidth}}p{0.975\textwidth}} \hline\hline
+  { \addvspace{10pt} \huge\bf \@chapapp{} \thechapter \par
+    \addvspace{10pt} \Huge \bf #1\par } \\
+%  { \addvspace{10pt} \huge\bf $BBh(B\space\thechapter $B>O(B \par
+%    \addvspace{10pt} \Huge \bf #1\par } \\
+  \end{tabular}
+  \vspace{40pt} }
+
+\def\newK@makeschapterhead#1{%
+  \vspace*{10pt}
+  \hspace{-0.05\textwidth}%
+  \begin{tabular}{||@{\hspace{0.05\textwidth}}p{0.975\textwidth}}
+  { \addvspace{10pt} \Huge \bf #1\par } \\ \hline\hline
+  \end{tabular}
+  \vspace{40pt} }
+
+\def\Anew@makechapterhead#1{%
+  \vspace*{10pt}
+  \hspace{-1mm}%
+  \begin{tabular}{||@{\hspace{2mm}}p{0.90\textwidth}} \hline\hline
+  { \addvspace{10pt} \LARGE\bf \@chapapp{} \thechapter \par
+    \addvspace{10pt} \huge \bf #1\par } \\
+%  { \addvspace{10pt} \huge\bf $BBh(B\space\thechapter $B>O(B \par
+%    \addvspace{10pt} \Huge \bf #1\par } \\
+  \end{tabular}
+  \vspace{30pt} }
+
+\def\Anew@makeschapterhead#1{%
+  \vspace*{10pt}
+  \hspace{-1mm}%
+  \begin{tabular}{||@{\hspace{2mm}}p{0.90\textwidth}}
+  { \addvspace{10pt} \huge \bf #1\par } \\ \hline\hline
+  \end{tabular}
+  \vspace{30pt} }
+
+%%%
+%
+%
+%               *
+%               * Chapter N
+%               * YYYYYYYYYYYYYYYYYYYYYYYYY
+%               *
+%
+%               ||
+%               || YYYYYYYYYYYYYYYYYYYYYYYYY
+%               ||
+%
+
+\def\OLD@makechapterhead#1{%
+  \vspace*{10pt}%
+  \noindent\hspace{2mm}%
+  {\arrayrulewidth=3mm%
+  \begin{tabular}{|@{\hspace{1mm}}p{0.90\textwidth}}%
+  { \addvspace{10pt} \huge\bf \@chapapp{} \thechapter\par%
+    \addvspace{10pt} \Huge\bf #1\par }\\ %
+%  { \addvspace{10pt} \huge\bf $BBh(B\space\thechapter $B>O(B \par
+%    \addvspace{10pt} \Huge\bf #1\par }\\%
+  \end{tabular}}%
+  \vspace{30pt}}
+
+\def\OLD@makeschapterhead#1{%
+  \vspace*{10pt}%
+  \noindent\hspace{2pt}%
+  {\arrayrulewidth=1pt%
+  \begin{tabular}{||@{\hspace{1mm}}p{0.90\textwidth}}%
+  {\addvspace{10pt}\Huge\bf#1\par}\\ %
+  \end{tabular}}%
+  \vspace{30pt}}
+
+\def\new@makechapterhead#1{%
+  \noindent\hspace{2mm}%
+  {\arrayrulewidth=3mm%
+  \begin{tabular}{|@{\hspace{1mm}}p{0.90\textwidth}}%
+  { \addvspace{10pt} \huge\bf \@chapapp{} \thechapter\par%
+    \addvspace{10pt} \Huge\bf \xstretchlabel{6mm}{#1}\par}\\ %
+%  { \addvspace{10pt} \huge\bf $BBh(B\space\thechapter $B>O(B \par
+%    \addvspace{10pt} \Huge\bf #1\par }\\%
+  \end{tabular}}%
+  \vspace{40pt}}
+
+\def\new@makeschapterhead#1{%
+  \noindent\hspace{2pt}%
+  {\arrayrulewidth=1pt%
+  \begin{tabular}{||@{\hspace{1mm}}p{0.90\textwidth}}%
+  {\addvspace{10pt}\Huge\bf\xstretchlabel{6mm}{#1}\par}\\ %
+  \end{tabular}}%
+  \vspace{40pt}}
+
+
+%
+%               part $B$K%X%C%@$d%U%C%?$r$D$1$J$$(B
+%
+
+\def\part{\cleardoublepage \thispagestyle{empty} \if@twocolumn \onecolumn
+\@tempswatrue \else \@tempswafalse \fi \hbox{}\vfil \secdef\@part\@spart}
+
+
+\def\yetanotherappendix{\par
+ \setcounter{chapter}{0}
+ \setcounter{section}{0}
+ %\def\@chapapp{$BIUO?(B \thechapter}
+ %\def\@chapapp##1{$BIUO?(B ##1}
+ \def\thechapter{\Alph{chapter}}%
+ %
+ \def\@makechapterhead##1{%
+  \vspace*{-20pt}%
+  {%
+   \parindent 0pt \raggedright 
+%  \ifnum \c@secnumdepth >\m@ne \Huge\bf \@chapapp{} \ \fi
+   \ifnum \c@secnumdepth >\m@ne {\huge\bf \thechapter\space} \fi
+   {\huge\bf ##1}\par
+   \nobreak \vskip 20pt
+  }
+ }
+}
+
+\def\appendix{\par
+ \setcounter{chapter}{0}
+ \setcounter{section}{0}
+ \def\thechapter{\Alph{chapter}}
+% \def\@chapapp{$BIUO?(B \thechapter}
+ \def\@chapapp{Appendix}
+
+ \let\@makechapterhead\new@makechapterhead
+ \let\@makeschapterhead\new@makeschapterhead
+}
+
+%
+% include from jalgol60.sty
+%
+
+\def\old@sect#1#2#3#4#5#6[#7]#8{\ifnum #2>\c@secnumdepth
+     \def\@svsec{}\else
+     \refstepcounter{#1}\edef\@svsec{\csname the#1\endcsname \hskip 1em }\fi
+     \@tempskipa #5\relax
+      \ifdim \@tempskipa>\z@
+        \begingroup #6\relax
+          \@hangfrom{\hskip #3\relax\@svsec}{\interlinepenalty \@M #8\par}
+        \endgroup
+       \csname #1mark\endcsname{#7}\addcontentsline
+         {toc}{#1}{\ifnum #2>\c@secnumdepth \else
+                      \protect\numberline{\csname the#1\endcsname}\fi
+                    #7}\else
+        \def\@svsechd{#6\hskip #3\@svsec #8\csname #1mark\endcsname
+                      {#7}\addcontentsline
+                           {toc}{#1}{\ifnum #2>\c@secnumdepth \else
+                             \protect\numberline{\csname the#1\endcsname}\fi
+                       #7}}\fi
+     \@xsect{#5}}
+
+\def\@sect#1#2#3#4#5#6[#7]#8{%
+  \ifnum #2>\c@secnumdepth%
+     \def\@svsec{}%
+  \else%
+     \refstepcounter{#1}\edef\@svsec{\csname the#1\endcsname \hskip 1em }%
+  \fi%
+    \@tempskipa #5\relax%
+    \ifdim\@tempskipa>\z@%
+      \begingroup #6\relax%
+        \@hangfrom{\hskip #3\relax\@svsec}%
+          {\interlinepenalty\@M\xstretchlabel{6mm}{#8}\par}%
+      \endgroup%
+      \csname #1mark\endcsname{#7}%
+      \addcontentsline{toc}{#1}{%
+        \ifnum #2>\c@secnumdepth%
+        \else%
+          \protect\numberline{\csname the#1\endcsname}
+        \fi%
+      #7}%
+    \else%
+      \def\@svsechd{#6\hskip #3\@svsec%
+        \xstretchlabel{6mm}{#8}\csname #1mark\endcsname%
+        {#7}
+        \addcontentsline{toc}{#1}{%
+          \ifnum #2>\c@secnumdepth%
+          \else%
+            \protect\numberline{\csname the#1\endcsname}%
+          \fi%
+                #7}}%
+    \fi%
+     \@xsect{#5}}
+
+
+%!! Mutation to the \numberline command, similar to above.
+
+%\def\numberline#1{\advance\hangindent\@tempdima \hbox to\@tempdima{#1.\hfil}}
+\def\numberline#1{\advance\@tempdima.25ex \hbox to\@tempdima{#1 \hfil}}
+
+
+
+\def\abstract{
+  \bgroup\small\sf\parindent=1mm%
+}
+\def\endabstract{
+  \egroup
+}
+
+\def\ecaption#1{}
+
+%\def\Hline{\hline}
+\def\Hline{\noalign{\hrule height 0.4mm}}
+
+%\def\fnum@figure{\sf Figure~\thefigure}
+%\def\fnum@table{\sf Table~\thetable}
+
+\def\@pnumwidth{2.5em}
+
+\def\l@part#1#2{%
+  \addpenalty{-\@highpenalty}%
+%  \addvspace{2.25em plus 1pt}%
+  \addvspace{2em plus 5pt minus 5pt}%
+  \begingroup%
+    \@tempdima 3em%
+    \parindent \z@%
+    \rightskip \@pnumwidth%
+    \parfillskip-\@pnumwidth%
+%    {\large \bf \leavevmode #1\hfil \hbox to\@pnumwidth{\hss #2}}\par%
+%    {\hfill\large\bf #1\hfill\hfill}\par%
+    {\hfill\large\bf\xstretchlabel{6mm}{#1}\hfill\hfill}\par%
+    \nobreak%
+  \endgroup}
+
+
+% Chỉnh lại font chữ của các tiêu đề
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\LARGE}
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\bfseries}

@@ -1,0 +1,38 @@
+Ngày nay, không thể phủ nhận tỷ lệ các thiết bị điện tử ngày càng tăng lên đáng kể. Theo báo cáo mới nhất của Ericsson Mobility \cite{Ericsson}, vào năm 2023, số lượng đăng ký điện thoại thông minh, PC di động, máy tính bảng và bộ định tuyến di động đã đạt khoảng 7 tỷ thiết bị và được dự đoán sẽ đạt hơn 8,5 tỷ thiết bị vào năm 2030.
+Bằng chứng này chứng minh rằng việc sử dụng đồng thời nhiều thiết bị với thông lượng cao và đường truyền đáng tin cậy là một yêu cầu rất lớn trong tương lai. Để đáp ứng những yêu cầu đó trong bối cảnh tài nguyên tần số hạn chế, Ủy ban Tiêu chuẩn LAN/MAN của Hiệp hội Máy tính IEEE đã nỗ lực phát hành các tiêu chuẩn 802.11ax (Wi-Fi 6) \cite{IEEEStd}, tiêu chuẩn này giới thiệu kỹ thuật đa truy cập phân chia theo tần số trực giao \acrshort{OFDMA} để giải quyết mối liên quan của các vấn đề điều khiển truyền dẫn, đặc biệt là trong truyền dẫn đa người dùng \acrshort{MU} đường lên \acrshort{UL}.
+
+ 
+\acrshort{OFDMA} là một cơ chế quan trọng để sử dụng kênh, chia các kênh có sẵn thành \acrfull{RU} được phân bổ cho \acrshort{STA} riêng lẻ, trong đó mỗi \acrshort{RU} tương ứng với một \acrshort{STA}. OFDMA giảm thiểu một cách hiệu quả các vấn đề về kênh chọn lọc tần số, tập trung vào việc nâng cao chất lượng tín hiệu. Tuy nhiên, tính hiệu quả của nó phải đối mặt với những thách thức trong việc mở rộng quy mô để hỗ trợ nhiều STA, vì việc cung cấp nhiều STA hơn đòi hỏi phải giảm kích thước RU hoặc tăng băng thông.
+Để cải thiện số lượng STA mà không thay đổi kích thước hoặc băng thông RU, 802.11ax đã phát hành một tùy chọn kết hợp OFDMA là \acrfull{MU-MIMO}, trong đó mỗi RU sử dụng MU-MIMO. Sử dụng nhiều ăng-ten ở cả phía phát và phía thu sẽ cải thiện hiệu suất phổ và chất lượng truyền mà không cần bổ sung băng thông cũng như tăng công suất nhưng phương pháp này có một số nhược điểm.
+Hiệu suất MU-MIMO bị ảnh hưởng mạnh mẽ bởi nhiễu đa truy cập \acrfull{MAI}, khi tăng số lượng STA trong RU, hiệu suất MU-MIMO sẽ giảm đáng kể.
+Ngoài ra, việc đánh giá, phân vùng và đồng bộ hóa tín hiệu đòi hỏi các thuật toán xử lý tín hiệu số phức tạp và độ phức tạp triển khai phần cứng cao \cite{MIMO_complex}.
+
+Một bổ sung gần đây cho kho cơ chế Wi-Fi trong tương lai là đa truy cập phi trực giao \acrshort{NOMA}, cho phép truyền đồng thời nhiều tín hiệu trong cùng một tài nguyên tần số thời gian. Mặc dù NOMA không được tích hợp vào tiêu chuẩn 802.11ax nhưng nhiều nghiên cứu khác nhau cho thấy khả năng tương thích ngược của nó với các tiêu chuẩn IEEE 802.11 hiện có. Đáng chú ý, Evgeny Khorov và các cộng sự đã trình bày nguyên mẫu thiết bị Wi-Fi đầu tiên hỗ trợ NOMA \cite{NOMA_WiFi}. Công trình của họ đã chứng minh việc giảm tỷ lệ lỗi bit \acrshort{BER} bằng cách kết hợp NOMA với Wi-Fi, như được nêu bật trong \cite{PhaseNoise}.
+Nhiều nghiên cứu của NOMA tập trung vào miền công suất, cung cấp cho STA các hệ số công suất khác nhau và sử dụng \acrfull{SIC} để phát hiện tín hiệu. Tuy nhiên, NoMA miền quyền lực gặp phải thách thức về khả năng mở rộng, vì việc đáp ứng các điều kiện \acrshort{SIC} cho nhiều STA trở nên phức tạp. 
+Ngoài ra, tính chất tuần tự của SIC, tiến triển từ STA yếu đến mạnh, có thể dẫn đến thời gian xử lý tăng lên, có khả năng vi phạm yêu cầu \acrfull{SIFS} trong hệ thống 802.11. Để giải quyết những hạn chế này, bài viết này sử dụng NOMA trong miền mã \acrfull{IDMA}. IDMA, một biến thể \acrfull{CDMA}, sử dụng mã xen kẽ để phân biệt các STA, dẫn đến bộ thu có độ phức tạp thấp có khả năng phát hiện tín hiệu song song \cite{IDMA}. Ngược lại với Đa truy cập phân chia theo tần số trực giao (OFDMA), IDMA cho phép tất cả STA sử dụng đồng thời tất cả các sóng mang con, loại bỏ chi phí dư thừa, độ phức tạp tính toán và các mối lo ngại về độ trễ \cite{IDMA_Per}.
+
+Bài viết này đề xuất sự kết hợp các hệ thống OFDMA-IDMA dựa trên kiến trúc 802.11ax.
+Sự kết hợp này có thể tăng đáng kể số lượng STA mà không làm giảm kích thước RU hoặc tăng băng thông như OFDMA, do đó cải thiện hiệu quả băng thông.
+Ngoài ra, OFDMA-IDMA còn cho phép có nhiều STA hơn mà không cần nhiều mã xen kẽ như IDMA truyền thống. Bằng cách sử dụng lại các mã xen kẽ ở các RU khác nhau, có thể tăng tính ngẫu nhiên của mã được sử dụng trong một RU, nhờ đó tăng hiệu quả giải mã ở máy thu.
+Hơn nữa, bằng cách chia số lượng STA thành RU, kỹ thuật OFDMA-IDMA có thể làm giảm ảnh hưởng của nhiễu liên ký tự \acrfull{ISI} và đặc biệt là \acrshort{MAI}.
+Hơn nữa, hệ thống được đề xuất tăng số lượng STA được truyền đồng thời trên đường lên và giảm BER so với OFDMA-MU-MIMO. Bài viết này cũng sử dụng phương pháp điều chế bậc cao đơn giản hóa \cite{IDMAHighOder} từ nghiên cứu trước đây của chúng tôi, giúp việc giải mã IDMA đơn giản hơn MU-MIMO.
+Ngoài ra, bài viết này sử dụng Kết hợp tỷ lệ tối đa \acrshort{MRC} tại AP để đảm bảo chất lượng tín hiệu và sử dụng kênh \acrshort{MIMO} pha đinh đa đường mô hình B TGax \cite{TGax} để đảm bảo độ bền và tính thực tế. Kết quả mô phỏng dựa trên hệ thống 802.11ax cho thấy hiệu suất BER được cải thiện so với các kỹ thuật hiện có như MU-MIMO, OFDMA và OFDMA-MU-MIMO.
+
+Cấu trúc của bài báo cáo bao gồm 5 chương như Hình \ref{fig:Struc}:
+
+\textbf{Chương \ref{Chap:Intro}}: Giới thiệu tổng quan về các kỹ thuật đa truy cập đường lên hiện có trong 802.11ax. Các ưu khuyết điểm và lý do đề xuất kỹ thuật OFDMA-IDMA.
+
+\textbf{Chương \ref{Chap:II}}: Giới thiệu cơ sở lý thuyết của IDMA và cấu trúc bộ thu IDMA với nhiều ăng-ten. 
+
+\textbf{Chương \ref{Chap:III}}: Đề xuất kiến trúc mô hình bộ phát và thu OFDMA-IDMA dựa trên chuẩn 802.11ax. 
+
+\textbf{Chương \ref{Chap:IV}}: So sánh tỉ lệ lỗi của hệ thống OFDMA-IDMA với các kỹ thuật đa truy cập hiện có của chuẩn 802.11ax. 
+
+\textbf{Chương \ref{Chap:V}}: Bàn luận ưu và nhược điểm của OFDMA-IDMA và hướng phát triễn. 
+
+\begin{figure}[H]
+    \centering
+    \input{figure/Chap1/struc.tex}
+    \caption{Cấu trúc báo cáo.}
+    \label{fig:Struc}
+\end{figure}
