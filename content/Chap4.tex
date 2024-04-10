@@ -1,25 +1,25 @@
 Các kết quả của mô hình OFDMA-IDMA đề xuất được mô phỏng và đánh giá để đánh giá hiệu suất so với các kỹ thuật hiện có trong 802.11ax. Các tham số mô hình OFDMA-IDMA chi tiết được nêu trong Bảng \ref{tab:Para}. Bội số SF sẽ giảm số bit dữ liệu để điều chỉnh kích thước gói của hệ thống OFDMA-IDMA theo tiêu chuẩn 802.11.
 
 \begin{table}[H]
-    \normalsize
-    \centering
-    \caption{Thông số mô phỏng}
-    \label{tab:Para}
-    \begin{tabular}{|l|l|}
-    \hline
-    \textbf{Parameters}         & \textbf{Value}    \\ \hline
-    Mô hình kênh                & TGax Channel Model B    \\ \hline
-    Băng thông                  & 20 MHz            \\ \hline
-    Số lượng RU chơ IDMA        & 4                 \\ \hline
-    Số lượng STA                & 8, 12, 16, 20, 24 \\ \hline
-    Hệ số trải (SF)             & 2                 \\ \hline
-    Kiểu điều chế               & 16-QAM            \\ \hline
-    Số lượng ăng-ten thu        & 4, 8              \\ \hline
-    Số vòng lặp                 & 4                 \\ \hline
-    Mã hóa kênh                 & LDPC              \\ \hline
-    Packet length               & 1000 Bytes        \\ \hline
-    Số lượng lặp mô phỏng       & 1000              \\ \hline
-    \end{tabular}
+	\normalsize
+	\centering
+	\caption{Thông số mô phỏng}
+	\label{tab:Para}
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Parameters}   & \textbf{Value}       \\ \hline
+		Mô hình kênh          & TGax Channel Model B \\ \hline
+		Băng thông            & 20 MHz               \\ \hline
+		Số lượng RU chơ IDMA  & 4                    \\ \hline
+		Số lượng STA          & 8, 12, 16, 20, 24    \\ \hline
+		Hệ số trải (SF)       & 2                    \\ \hline
+		Kiểu điều chế         & 16-QAM               \\ \hline
+		Số lượng ăng-ten thu  & 4, 8                 \\ \hline
+		Số vòng lặp           & 4                    \\ \hline
+		Mã hóa kênh           & LDPC                 \\ \hline
+		Packet length         & 1000 Bytes           \\ \hline
+		Số lượng lặp mô phỏng & 1000                 \\ \hline
+	\end{tabular}
 \end{table}
 %=====================
 Hình \ref{fig:IT} cho thấy sự tác động của số lần lặp đến hiệu suất BER của OFDMA-IDMA. Khi số lần lặp tăng lên, BER được cải thiện rõ rệt. Tuy nhiên, điều cần thiết là phải xem xét sự đánh đổi với độ trễ, độ trễ có xu hướng tăng tuyến tính theo số lần lặp, để tạo sự cân bằng giữa độ trễ và chất lượng tín hiệu là rất quan trọng.
@@ -27,18 +27,18 @@ Hình \ref{fig:IT} cho thấy sự tác động của số lần lặp đến hi
 Các tác giả này đã nghiên cứu mối quan hệ giữa số lần lặp và độ trễ trong các kịch bản OFDM-IDMA. Đối với SF bằng 2, độ trễ của hệ thống là khoảng 6 $\mu s$ cho 4 lần lặp, trong khi nó vượt quá 10 $\mu s$ cho 8 lần lặp. Do đó, báo cáo này đã chọn ra 4 lần lặp lại là một sự thỏa hiệp phù hợp để đáp ứng các yêu cầu về chất lượng và độ trễ.
 
 \begin{figure}
-    \pgfplotsset{width=0.75\linewidth,height=10cm,
-        x label style={at={(axis description cs:0.5 , -0.05)},anchor=north},
-        y label style={at={(axis description cs:-0.125, 0.5)},anchor=south},
-        xmajorgrids,
-        ymajorgrids,
-    }
-    \pgfplotsset{yticklabel style={text width=2em,align=right}}
-    \centering
-        \input{figure/chap4/IT-change.tex}
-    \caption{Ảnh hưởng của số lần lặp với STA = 20, NRx = 8.}
-    \label{fig:IT}
-    % \vspace{-1em}
+	\pgfplotsset{width=0.75\linewidth,height=10cm,
+		x label style={at={(axis description cs:0.5 , -0.05)},anchor=north},
+		y label style={at={(axis description cs:-0.125, 0.5)},anchor=south},
+		xmajorgrids,
+		ymajorgrids,
+	}
+	\pgfplotsset{yticklabel style={text width=2em,align=right}}
+	\centering
+	\input{figure/chap4/IT-change.tex}
+	\caption{Ảnh hưởng của số lần lặp với STA = 20, NRx = 8.}
+	\label{fig:IT}
+	% \vspace{-1em}
 \end{figure}
 %==========================
 
@@ -53,41 +53,41 @@ Sự đánh đổi này đáng được xem xét trong trường hợp OFDMA-MU-
 
 
 \begin{figure}
-    \centering
-    \pgfplotsset{width=\linewidth,height=10cm,
-        x label style={at={(axis description cs:0.5 , -0.1)},anchor=north},
-        y label style={at={(axis description cs:-0.2, 0.5)},anchor=south},
-        xmajorgrids,
-        ymajorgrids,
-    }
-    \pgfplotsset{yticklabel style={text width=2em,align=right}}
-
-    \begin{subfigure}[]{0.45\linewidth}
-        \input{figure/chap4/MU-MIMO.tex}
-        \vspace{-1.5em}
-        \caption{BER của MU-MIMO.}\label{fig:BER MU-MIMO}
-    \end{subfigure}
-    \begin{subfigure}[]{0.45\linewidth}
-        \input{figure/chap4/OFDMA.tex}
-        \vspace{-1.5em}
-        \caption{BER của OFDMA.}\label{fig:BER OFDMA}
-    \end{subfigure}
-
-    \vspace{1cm}
-    %================================
-    \begin{subfigure}[]{0.45\linewidth}
-        \input{figure/chap4/fig.tex}
-        \vspace{-1.5em}
-     \caption{BER của OFDMA-MU-MIMO.} \label{fig:BER OFDMA-MU-MIMO}  
-    \end{subfigure} 
-    \begin{subfigure}[]{0.45\linewidth}
-        \input{figure/chap4/berNRx8.tex}
-        \vspace{-0.25em}
-     \caption{BER của OFDMA-IDMA.} \label{fig:BER OFDMA-IDMA}  
-    \end{subfigure} 
-
-    \caption{Hiệu suất BER trung bình giữa các kỹ thuật.}\label{fig:bersec4}
-    \vspace{1.51em}
+	\centering
+	\pgfplotsset{width=\linewidth,height=10cm,
+		x label style={at={(axis description cs:0.5 , -0.1)},anchor=north},
+		y label style={at={(axis description cs:-0.2, 0.5)},anchor=south},
+		xmajorgrids,
+		ymajorgrids,
+	}
+	\pgfplotsset{yticklabel style={text width=2em,align=right}}
+	
+	\begin{subfigure}[]{0.45\linewidth}
+		\input{figure/chap4/MU-MIMO.tex}
+		\vspace{-1.5em}
+		\caption{BER của MU-MIMO.}\label{fig:BER MU-MIMO}
+	\end{subfigure}
+	\begin{subfigure}[]{0.45\linewidth}
+		\input{figure/chap4/OFDMA.tex}
+		\vspace{-1.5em}
+		\caption{BER của OFDMA.}\label{fig:BER OFDMA}
+	\end{subfigure}
+	
+	\vspace{1cm}
+	%================================
+	\begin{subfigure}[]{0.45\linewidth}
+		\input{figure/chap4/fig.tex}
+		\vspace{-1.5em}
+		\caption{BER của OFDMA-MU-MIMO.} \label{fig:BER OFDMA-MU-MIMO}
+	\end{subfigure}
+	\begin{subfigure}[]{0.45\linewidth}
+		\input{figure/chap4/berNRx8.tex}
+		\vspace{-0.25em}
+		\caption{BER của OFDMA-IDMA.} \label{fig:BER OFDMA-IDMA}
+	\end{subfigure}
+	
+	\caption{Hiệu suất BER trung bình giữa các kỹ thuật.}\label{fig:bersec4}
+	\vspace{1.51em}
 \end{figure}
 % Although the reference BER is achieved, it is clear that OFDMA-IDMA still gives much better results (STA = 8, NRx = 8). In addition, when considering increasing the number of STAs to 20, the BER is still approximately $3\mathord{\times}10^{-4}$, meaning that even though the data rate is reduced by half, the number of STAs is increased 5 times compared to OFDMA.
 

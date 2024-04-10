@@ -145,8 +145,8 @@
 
 %%============ Name ==================
 \title{Kỹ thuật đa người dùng số lượng lớn cho đường lên OFDMA-IDMA dựa trên IEEE 802.11ax} % tên đề tài tiếng việt
-\titleEN{Massive Up-Link Multi-User with OFDMA-IDMA 
-Combination based on IEEE 802.11ax} % tên đề tài tiếng anh
+\titleEN{Massive Up-Link Multi-User with OFDMA-IDMA
+	Combination based on IEEE 802.11ax} % tên đề tài tiếng anh
 \author{Tạ Viết Tài} %tên tác giả tiếng việt
 \authorEN{Ta Viet Tai} %tên tác giả tiếng anh
 \studentid{22C41006}
@@ -198,16 +198,16 @@ Combination based on IEEE 802.11ax} % tên đề tài tiếng anh
 % }
 
 \abstractVN{
-    Đa truy cập phân chia theo tần số trực giao (OFDMA) được giới thiệu trong chuẩn 802.11ax để giải quyết mối liên quan của các vấn đề truyền dẫn bằng cách chia kênh thành các Đơn vị tài nguyên (RU) được phân bổ cho các Trạm (STA), đặc biệt là trong truyền dẫn đa người dùng Đường lên (UL), nhưng gặp khó khăn với nhiều STA do hạn chế về kích thước RU hoặc băng thông. Đa truy câp phi trực giao (NOMA) là một kỹ thuật mạng không dây được đánh giá cao để khắc phục những vấn đề này. IDMA có thể tận dụng các ưu điểm của NOMA, chẳng hạn như nâng cao hiệu suất phổ, dung lượng STA và tốc độ dữ liệu mà không cần thay đổi kích thước RU hoặc băng thông. Báo cáo này đề xuất sự kết hợp của Đa truy nhập phân chia xen kẽ (IDMA) để tăng số lượng STA trong nhiều người dùng UL vào hệ thống OFDMA 802.11ax hiện có. Việc kết hợp OFDMA và IDMA có thể giảm số lượng STA trên mỗi RU, giảm Nhiễu đa truy cập, đây là vấn đề khi sử dụng IDMA riêng lẻ. Kết quả cho thấy chất lượng Tỷ lệ lỗi bit (BER) giảm đáng kể so với Nhiều đầu vào nhiều người dùng (MU-MIMO), OFDMA và OFDMA-MU-MIMO hiện có trong 802.11ax. Ngoài ra, OFDMA-IDMA hỗ trợ số lượng STA gấp 5 lần OFDMA trong khi vẫn duy trì chất lượng như cũ.
-    
-%======%
-% \postabstractVN %Thời gian và Tên người thực hiện
+	Đa truy cập phân chia theo tần số trực giao (OFDMA) được giới thiệu trong chuẩn 802.11ax để giải quyết mối liên quan của các vấn đề truyền dẫn bằng cách chia kênh thành các Đơn vị tài nguyên (RU) được phân bổ cho các Trạm (STA), đặc biệt là trong truyền dẫn đa người dùng Đường lên (UL), nhưng gặp khó khăn với nhiều STA do hạn chế về kích thước RU hoặc băng thông. Đa truy câp phi trực giao (NOMA) là một kỹ thuật mạng không dây được đánh giá cao để khắc phục những vấn đề này. IDMA có thể tận dụng các ưu điểm của NOMA, chẳng hạn như nâng cao hiệu suất phổ, dung lượng STA và tốc độ dữ liệu mà không cần thay đổi kích thước RU hoặc băng thông. Báo cáo này đề xuất sự kết hợp của Đa truy nhập phân chia xen kẽ (IDMA) để tăng số lượng STA trong nhiều người dùng UL vào hệ thống OFDMA 802.11ax hiện có. Việc kết hợp OFDMA và IDMA có thể giảm số lượng STA trên mỗi RU, giảm Nhiễu đa truy cập, đây là vấn đề khi sử dụng IDMA riêng lẻ. Kết quả cho thấy chất lượng Tỷ lệ lỗi bit (BER) giảm đáng kể so với Nhiều đầu vào nhiều người dùng (MU-MIMO), OFDMA và OFDMA-MU-MIMO hiện có trong 802.11ax. Ngoài ra, OFDMA-IDMA hỗ trợ số lượng STA gấp 5 lần OFDMA trong khi vẫn duy trì chất lượng như cũ.
+
+	%======%
+	% \postabstractVN %Thời gian và Tên người thực hiện
 }
 
 \abstractEng{
-    Orthogonal Frequency Division Multiple Access (OFDMA) is introduced in the 802.11 ax standard system to resolve the relevance of transmission problems by splitting the channel into Resource Units (RU) allocated to Stations (STAs), especially in Uplink (UL) multi-user transmission, but struggles with many STAs due to RU size or bandwidth constraints. Non-Othorgonal Multiple Access (NOMA) is a highly appreciated wireless network technique to overcome these issues. The IDMA can take advantage of NOMA, such as enhancing spectrum efficiency, STA capacity, and data rates without RU size or bandwidth changes. This report proposes a combination of Interleave Division Multiple Access (IDMA) to massive the number of STAs in UL multi-user into the existing OFDMA system of 802.11ax. Combining the OFDMA and IDMA can reduce the number of STAs per RU, reducing the Multiple Access Interference, which is the problem when using IDMA individually. The results show a significant decrease in Bit Error Rate (BER) quality compared to existing Multiuser-Multiple Input Multiple Output (MU-MIMO), OFDMA, and OFDMA-MU-MIMO in 802.11ax. In addition, OFDMA-IDMA supports a number of STAs 5 times more than OFDMA while maintaining the same quality.% (BER of approximately. %3\times10^{−4} at SNR = 20 [dB]).
+	Orthogonal Frequency Division Multiple Access (OFDMA) is introduced in the 802.11 ax standard system to resolve the relevance of transmission problems by splitting the channel into Resource Units (RU) allocated to Stations (STAs), especially in Uplink (UL) multi-user transmission, but struggles with many STAs due to RU size or bandwidth constraints. Non-Othorgonal Multiple Access (NOMA) is a highly appreciated wireless network technique to overcome these issues. The IDMA can take advantage of NOMA, such as enhancing spectrum efficiency, STA capacity, and data rates without RU size or bandwidth changes. This report proposes a combination of Interleave Division Multiple Access (IDMA) to massive the number of STAs in UL multi-user into the existing OFDMA system of 802.11ax. Combining the OFDMA and IDMA can reduce the number of STAs per RU, reducing the Multiple Access Interference, which is the problem when using IDMA individually. The results show a significant decrease in Bit Error Rate (BER) quality compared to existing Multiuser-Multiple Input Multiple Output (MU-MIMO), OFDMA, and OFDMA-MU-MIMO in 802.11ax. In addition, OFDMA-IDMA supports a number of STAs 5 times more than OFDMA while maintaining the same quality.% (BER of approximately. %3\times10^{−4} at SNR = 20 [dB]).
 
-% \postabstractEng %Thời gian và Tên người thực hiện
+	% \postabstractEng %Thời gian và Tên người thực hiện
 }
 
 % Tạo mục lục, danh sách hình vẽ, danh sách bảng
@@ -217,22 +217,22 @@ Combination based on IEEE 802.11ax} % tên đề tài tiếng anh
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeatletter
-    \def\cleardoublepage{\clearpage%
-        \if@twoside
-            \ifodd\c@page\else
-                \vspace*{\fill}
-                \hfill
-                \vspace{-20em}
-                \begin{center}
-                Trang này được để trống.
-                \end{center}
-                \vspace{\fill}
-                \thispagestyle{empty}
-                \newpage
-                \if@twocolumn\hbox{}\newpage\fi
-            \fi
-        \fi
-    }
+\def\cleardoublepage{\clearpage%
+	\if@twoside
+	\ifodd\c@page\else
+	\vspace*{\fill}
+	\hfill
+	\vspace{-20em}
+	\begin{center}
+		Trang này được để trống.
+	\end{center}
+	\vspace{\fill}
+	\thispagestyle{empty}
+	\newpage
+	\if@twocolumn\hbox{}\newpage\fi
+	\fi
+	\fi
+}
 \makeatother
 
 
@@ -269,18 +269,18 @@ Combination based on IEEE 802.11ax} % tên đề tài tiếng anh
 %%======= Publications =======
 %%============================
 \renewcommand\bibname{Các công trình công bố}
-\begin{thebibliography}{100} 
-    % \bibitem{Boney96} T. V. Tai, M. P. N. Tan, L. H. Nam, N. V. Ha, and T. T. T. Nguyen,, ``Convergence Evaluation of OFDMA-IDMA Combination based on IEEE 802.11ax,'' in \emph{2024 16th International Conference on Knowledge and Smart Technology (KST)}, pp. 247--252, 2024.
+\begin{thebibliography}{100}
+	% \bibitem{Boney96} T. V. Tai, M. P. N. Tan, L. H. Nam, N. V. Ha, and T. T. T. Nguyen,, ``Convergence Evaluation of OFDMA-IDMA Combination based on IEEE 802.11ax,'' in \emph{2024 16th International Conference on Knowledge and Smart Technology (KST)}, pp. 247--252, 2024.
 
-    \bibitem{MG} T. V. Tai, M. P. N. Tan, N. M. Tri, N. V. Ha, and T. T. T. Nguyen, ``A High Sensitivity SQI with Peak-Amplitude Difference Variance for Wearable ECG Signals'', in \emph{2023 5th International Conference on Bio-engineering for Smart Technologies (BioSMART)}, pp. 1--4, 2023.
+	\bibitem{MG} T. V. Tai, M. P. N. Tan, N. M. Tri, N. V. Ha, and T. T. T. Nguyen, ``A High Sensitivity SQI with Peak-Amplitude Difference Variance for Wearable ECG Signals'', in \emph{2023 5th International Conference on Bio-engineering for Smart Technologies (BioSMART)}, pp. 1--4, 2023.
 
-    \bibitem{HK} M. P. N. Tan, T. V. Tai, N. M. Tri, N. V. Ha, and T. T. T. Nguyen, ``EEG-ECG Extraction for Wearable All-in-One Healthcare Device'', in \emph{2023 6th International Conference on Electrical, Electronics and System Engineering (ICEESE)}, pp. 61--65, 2023.
+	\bibitem{HK} M. P. N. Tan, T. V. Tai, N. M. Tri, N. V. Ha, and T. T. T. Nguyen, ``EEG-ECG Extraction for Wearable All-in-One Healthcare Device'', in \emph{2023 6th International Conference on Electrical, Electronics and System Engineering (ICEESE)}, pp. 61--65, 2023.
 
-    \bibitem{Pan} T. V. Tai, M. P. N. Tan, D. H. Tien, \textit{et al.}, ``Signal Quality Indices based on Skewness of Peak-Peak Interval for Wearable ECG Devices'', in \emph{2023 Signal Processing: Algorithms, Architectures, Arrangements, and Applications (SPA)}, pp. 42--47, 2023.
+	\bibitem{Pan} T. V. Tai, M. P. N. Tan, D. H. Tien, \textit{et al.}, ``Signal Quality Indices based on Skewness of Peak-Peak Interval for Wearable ECG Devices'', in \emph{2023 Signal Processing: Algorithms, Architectures, Arrangements, and Applications (SPA)}, pp. 42--47, 2023.
 
-    \bibitem{MG} T. V. Tai, M. P. N. Tan, N. M. Tri, N. V. Ha, and T. T. T. Nguyen, ``Signal Quality Indices Based on Gain of Amplitude Difference for Wearable ECG Signals'', in \emph{ 2023 International Conference on Advanced Technologies for Communications (ATC)}, pp. 19--24, 2023.
+	\bibitem{MG} T. V. Tai, M. P. N. Tan, N. M. Tri, N. V. Ha, and T. T. T. Nguyen, ``Signal Quality Indices Based on Gain of Amplitude Difference for Wearable ECG Signals'', in \emph{ 2023 International Conference on Advanced Technologies for Communications (ATC)}, pp. 19--24, 2023.
 
-    \bibitem{MG} D. H. Tien, M. P. N. Tan, T. H. Nam, T. V. Tai, and T. T. T. Nguyen, ``A Low-Complexity R-Peak Detection Based on Exponential Weight Mean-Variance for Wearable ECG Devices'', in \emph{ 2023 International Conference on Advanced Technologies for Communications (ATC)}, pp. 415--420, 2023.
+	\bibitem{MG} D. H. Tien, M. P. N. Tan, T. H. Nam, T. V. Tai, and T. T. T. Nguyen, ``A Low-Complexity R-Peak Detection Based on Exponential Weight Mean-Variance for Wearable ECG Devices'', in \emph{ 2023 International Conference on Advanced Technologies for Communications (ATC)}, pp. 415--420, 2023.
 \end{thebibliography}
 
 \renewcommand\bibname{Tài liệu tham khảo}
