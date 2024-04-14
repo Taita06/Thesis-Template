@@ -34,6 +34,7 @@
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{cite}
 \usepackage{physics}
+\DeclareMathOperator{\diag}{diag}
 \usepackage{txfonts}
 \usepackage{times}
 \usepackage{url}
@@ -76,6 +77,14 @@
     line width = 0.5pt
   }
 }
+%%=========================================== 
+%============ Water mark ====================
+%%=========================================== 
+\usepackage{atbegshi}
+\AtBeginShipout{\AtBeginShipoutAddToBox{%
+	\tikz[overlay,remember picture]
+		\node[rotate=50,scale=4.5,lightgray,font=\bfseries]
+			at (current page.center) {Ta Viet Tai-FETEL-HCMUS};}}
 
 %%=========================================== 
 %========= build fig more faster=============

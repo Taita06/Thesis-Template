@@ -171,19 +171,18 @@ Sau khi tính toán giá trị LLR, báo cáo này sử dụng kỹ thuật \acr
 
 \subsection{Cập nhật giá trị trung bình và phương sai} \label{update}
 Sau khi tính toán DEC, IDMA cần cập nhật giá trị trung bình và phương sai cho lần lặp tiếp theo. Phần cập nhật bao gồm bộ trãi mã, bộ xen kẽ và bộ ánh xạ mềm. Đầu ra của quá trình khử trải phổ là các LLR bên ngoài cho $y_{k,n}(j)$ Sau đó, các LLR này được sử dụng để tạo số liệu thống kê trong \eqref{eq:12}, \eqref{eq:13}
+\begin{subequations}
 \begin{equation}
 	\mathbb{E}(x_{k,n}(j)) = \sum_{\nu = 0}^{2^{N_{bpsc}}-1} (p \mathord{+}iq)_\nu \mathord{\times} \left(\dfrac{e^{DEC(\hat{a}_n(j))}}{1 \mathord{+} e^{DEC(\hat{a}_n(j))}}\right)_\nu,
 	\label{eq:12}
 \end{equation}
 \begin{equation}
-	% \begin{split}
-	\textbf{Cov}(x_{k,n}(j))
-	=\textbf{I}_2 \mathord{\times}
-	\begin{bmatrix}
-		\Re(\text{Var}(x_{k,n}(j))) \mathord{-} \Re(\mathbb{E}(x_{k,n}(j)))^2 \\
-		\Im(\text{Var}(x_{k,n}(j))) \mathord{-} \Im(\mathbb{E}(x_{k,n}(j)))^2
-	\end{bmatrix},
-	% \end{split}
+	\begin{split}
+		\textbf{Cov}(x_{k,n}(j))\mathord{=}
+		& \diag\big(\Re(\text{Var}(x_{k,n}(j))) \mathord{-} \Re(\mathbb{E}(x_{k,n}(j)))^2, \\
+		& \Im(\text{Var}(x_{k,n}(j))) \mathord{-} \Im(\mathbb{E}(x_{k,n}(j)))^2\big),
+	\end{split}
 	\label{eq:13}
 \end{equation}
+\end{subequations}
 trong đó $N_{bpsc}$ là số bit trên mỗi ký hiệu, $p$ và $q$ là các giá trị được lấy bởi trục $\Re$ và $\Im$ (ví dụ: các giá trị là $\{$-3, -1, +1, +3$\}$ cho 16-QAM).

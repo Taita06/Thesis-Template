@@ -1,14 +1,16 @@
-INFO:  latexindent version 3.20.1, 2023-01-07, a script to indent .tex files
-       latexindent lives here: /usr/share/texlive/texmf-dist/scripts/latexindent/
-       Wed Apr 10 04:08:51 2024
-       Filename: /home/ict-latex/Public/Tai/Thesis Template/Thesis.tex
+INFO:  latexindent.exe version 3.20.3, 2023-02-19, a script to indent .tex files
+       latexindent.exe lives here: C:/texlive/2022/bin/win32/
+       Mon Apr 15 00:38:53 2024
+       Filename: d:\02 project\03 Cao hoc\Thesis-Template\Thesis.tex
 INFO:  Processing switches:
 INFO:  Directory for backup files and indent.log:
-       /home/ict-latex/Public/Tai/Thesis Template
+       d:\02 project\03 Cao hoc\Thesis-Template
 INFO:  YAML settings read: defaultSettings.yaml
-       Reading defaultSettings.yaml from /usr/share/texlive/texmf-dist/scripts/latexindent/defaultSettings.yaml
+       Reading defaultSettings.yaml from C:/texlive/2022/bin/win32/defaultSettings.yaml
+       Reading defaultSettings.yaml (2nd attempt) from C:/texlive/2022/bin/win32/../../texmf-dist/scripts/latexindent/defaultSettings.yaml
+       and then, if necessary, C:/texlive/2022/bin/win32/LatexIndent/defaultSettings.yaml
 INFO:  YAML reading settings
-       Home directory is /home/ict-latex
+       Home directory is C:\Users\Tai Ta
        latexindent.pl didn't find indentconfig.yaml or .indentconfig.yaml
        see all possible locations: https://latexindentpl.readthedocs.io/en/latest/sec-appendices.html#indentconfig-options)
 INFO:  Phase 1: searching for objects
