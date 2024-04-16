@@ -4,315 +4,320 @@
 
  %In 1 mặt: oneside
  %In 2 mặt: twoside
-\documentclass[a4paper,titlepage,twoside,openright,12pt]{book}
-%Kích thước chữ:
-\usepackage[fontsize=13pt]{scrextend}
-
-%%===========================================
-%%====== Page ref without hyperlink==========
-%%=========================================== 
-% \usepackage[pageref]{backref}
-% \renewcommand\backrefpagesname{}
-% \renewcommand\backrefxxx[3]{%
-%   {$\textbf{#1}$}%
-% }
-%%=========================================== 
-
-%%=========================================== 
-%%====== Page ref with hyperlink==========
-%%=========================================== 
-\usepackage[pagebackref]{hyperref}
-\hypersetup{
-    colorlinks=false,
-    linkcolor=red,
-    filecolor=magenta,      
-    urlcolor=black,
-    pdftitle={Thesis},
-    pdfauthor={Ta Viet Tai}
-    % pdfpagemode=FullScreen,
-}
-\usepackage{amsmath,amssymb,amsfonts}
-\usepackage{cite}
-\usepackage{physics}
-\DeclareMathOperator{\diag}{diag}
-\usepackage{txfonts}
-\usepackage{times}
-\usepackage{url}
-\usepackage{here}
-\usepackage[dvips]{graphicx}
-\usepackage{doctorvn,dthook}
-\usepackage{color,colortbl}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage{rotating}
-
-% Algorithm
-\usepackage{algorithm}
-\usepackage{algpseudocode}
-
-% Hau usepackage
-\usepackage{amsmath}
-\usepackage{booktabs}
-\usepackage{tabularx}
-\usepackage{array}
-\usepackage{multirow}
-\usepackage{indentfirst}
-
-%Table and figure
-\usepackage{svg}
-\usepackage{longtable}
-\usepackage{pgfplots}
-\usetikzlibrary{shapes,arrows,mindmap,decorations.fractals,spy}%
-
-\DeclareUnicodeCharacter{2212}{−}
-\usepgfplotslibrary{groupplots,dateplot}
-\usetikzlibrary{patterns, shapes.arrows}
-\pgfplotsset{compat=newest}
-\captionsetup{belowskip=-1.1em}
-\pgfplotsset{
-  grid style = {
-    dash pattern = on 0.05mm off 1mm,
-    line cap = round,
-    black,
-    line width = 0.5pt
-  }
-}
-%%=========================================== 
-%============ Water mark ====================
-%%=========================================== 
-\usepackage{atbegshi}
-\AtBeginShipout{\AtBeginShipoutAddToBox{%
-	\tikz[overlay,remember picture]
-		\node[rotate=50,scale=4.5,lightgray,font=\bfseries]
-			at (current page.center) {Ta Viet Tai-FETEL-HCMUS};}}
-
-%%=========================================== 
-%========= build fig more faster=============
-%%=========================================== 
-% \usetikzlibrary{external}
-% \tikzexternalize[prefix=fig_tkz/]   
-% need using "pdflatex -shell -escape <mainfile>.tex" for the first compiling. Make sure the folder "fig_tkz" is empty. 
-
-%%=====================
-%===== Set title=======
-%%=====================
-% display: on the different line
-% hang: on the same line
-% \titleformat{\chapter}[hang] 
-%   {\Large\bfseries}{\thechapter~~}{0pt}{\Large} %\Large\centering\chaptertitlename~\thechapter
-
-%%=========================================== 
-%=========Hyphenation========================
-%%=========================================== 
-
-% \hyphenation{op-tical net-works semi-conduc-tor}
-
-%%=========================================== 
-%========= Algorithm=========================
-%%=========================================== 
-% \newcommand{\Input}[1]{\algrenewcommand{\alglinenumber}[1]{Input: \ \setcounter{ALG@line}{\numexpr##1-1}} #1}
-% \newcommand{\Step}[1]{\algrenewcommand{\alglinenumber}[1]{Step ##1: } #1}
-% \newcommand{\NoNumber}{\algrenewcommand{\alglinenumber}[1]{\setcounter{ALG@line}{\numexpr##1-1} \ \ \ \ \ \ \ \ \ \ }}
-% \newcommand{\Output}[1]{\algrenewcommand{\alglinenumber}[1]{Output:\setcounter{ALG@line}{\numexpr##1-1}} #1}
-
-
-%%=========================================== 
-%========= Highlight text====================
-%%=========================================== 
-\usepackage{color,soul}
-\newcommand\highlight[1]{\hl{#1}}
-% \renewcommand{\hl}[1]{#1}                 %%  Remove all highlight       
-\DeclareRobustCommand{\hlcyan}[1]{{\sethlcolor{cyan!40}\hl{#1}}}
-\DeclareRobustCommand{\hlgray}[1]{{\sethlcolor{lightgray}\hl{#1}}}
-
-% Publication
-% \usepackage{natbib}
-% \usepackage{bibunits}
-\usepackage[resetlabels,labeled]{multibib}
-\newcites{Pub}{Publication}
-% \usepackage[natbib,style=authoryear,refsection=chapter]{biblatex}
-% \addbibresource{./0-Bib/Publication.bib}
-
-
-% Hỗ trợ viết tiếng Việt
-\usepackage[T1,T5]{fontenc}
-\usepackage[vietnamese]{babel}
-
-% Đánh số cấp 3
-\setcounter{secnumdepth}{3}
-
-\begin{document}
-
-
-\firstuniversity{đại học quốc gia thành phố hồ chí minh}
-\seconduniversity{trường đại học khoa học tự nhiên}
-\faculty{điện tử -- viễn thông}
-\department{Điện tử -- Viễn thông -- Máy tính}
-\major{kỹ thuật điện tử}
-\departmentId{7520207}
-\reporttype{Báo cáo môn học} %luận văn tốt nghiệp | Seminar tốt nghiệp | Báo cáo môn học: Viết báo cáo khoa học bằng LaTeX 
-
-%%============ Name ==================
-\title{Kỹ thuật đa người dùng số lượng lớn cho đường lên OFDMA-IDMA dựa trên IEEE 802.11ax} % tên đề tài tiếng việt
-\titleEN{Massive Up-Link Multi-User with OFDMA-IDMA
-	Combination based on IEEE 802.11ax} % tên đề tài tiếng anh
-\author{Tạ Viết Tài} %tên tác giả tiếng việt
-\authorEN{Ta Viet Tai} %tên tác giả tiếng anh
-\studentid{22C41006}
-\supervisor{TS.~Trần~Thị~Thảo~Nguyên~}
-\projectname{Các giao thức truyền thông}
-% \mail{tttnguyen@hcmus.edu.vn}
-
-%============Tạo trang bìa===============
-% \makecoverpage %Report project
-\maketitlepage %thesis
-
-\makesubtitlepage	%Tạo trang lót
-
-% \makeassesspage
-
-%========= create foot header =========
-% \fancyhf{}
-% % \rhead[\rightmark]{\includegraphics[height=1.3cm]{figure/ICTLAB_Logo_withName.pdf}}
-% \fancyhead[RO,LE]{\transparent{0.7}\includegraphics[height=1cm]{figure/ICTLAB_Logo.pdf}}
-% % \rhead[\rightmark]{\includegraphics[height=1.3cm]{figure/ICTLAB_Logo_withName.pdf}}
-% % \cfoot{\thepage}
-% \fancyfoot[LE,RO]{\thepage} 
-% % \renewcommand{\headrule}{\color[rgb]{0,94,56}}
-% \renewcommand{\headrulewidth}{0.4pt}
-
-% Báo cáo tóm tắt:
-% \reportSum{
-%     \postreportSum
-%     \input{content/reportSum}
-% }
-
-
-
-%Lời cám ơn:
-% \acknowledgement{
-%     Chúng tôi xin được cảm ơn chương trình Hỗ trợ cho nghiên cứu và giáo dục của 
-%     Công ty cổ phần ITR VN đã hỗ trợ kinh phí để nhóm nghiên cứu thực hiện đề tài này. 
-%     Đặc biệt, chúng tôi xin chân thành cảm ơn Giám đốc Trần Hoàng Đạt và anh Bùi An Đông của công ty ITR VN 
-%     đã tận tình hướng dẫn, hợp tác, cung cấp những kinh nghiệm quý báu, 
-%     tạo điều kiện để hỗ trợ nhóm nghiên cứu có những kết quả đầu tiên tốt đẹp.
-%     Bên cạnh đó, chúng tôi cũng tỏ lòng biết ơn đến Ban giám hiệu trường Đại học Khoa Học Tự Nhiên, 
-%     Ban chủ nhiệm Khoa Điện Tử Viễn Thông, và toàn bộ cán bộ phòng Khoa Học Công Nghệ, 
-%     phòng Kế hoạch - Tài chính đã hỗ trợ chúng tôi trong suốt thời gian nghiên cứu.
-
-%     Cuối cùng và cũng là quan trọng nhất, chúng tôi xin được cảm ơn tập thể ICTLAB, 
-%     cảm ơn gia đình vì đã luôn luôn âm thầm sát cánh, hỗ trợ chúng tôi trong suốt thời gian vừa qua.
-%    %====% 
-% \postackEng
-% }
-
-\abstractVN{
-	Đa truy cập phân chia theo tần số trực giao (OFDMA) được giới thiệu trong chuẩn 802.11ax để giải quyết mối liên quan của các vấn đề truyền dẫn bằng cách chia kênh thành các Đơn vị tài nguyên (RU) được phân bổ cho các Trạm (STA), đặc biệt là trong truyền dẫn đa người dùng Đường lên (UL), nhưng gặp khó khăn với nhiều STA do hạn chế về kích thước RU hoặc băng thông. Đa truy câp phi trực giao (NOMA) là một kỹ thuật mạng không dây được đánh giá cao để khắc phục những vấn đề này. IDMA có thể tận dụng các ưu điểm của NOMA, chẳng hạn như nâng cao hiệu suất phổ, dung lượng STA và tốc độ dữ liệu mà không cần thay đổi kích thước RU hoặc băng thông. Báo cáo này đề xuất sự kết hợp của Đa truy nhập phân chia xen kẽ (IDMA) để tăng số lượng STA trong nhiều người dùng UL vào hệ thống OFDMA 802.11ax hiện có. Việc kết hợp OFDMA và IDMA có thể giảm số lượng STA trên mỗi RU, giảm Nhiễu đa truy cập, đây là vấn đề khi sử dụng IDMA riêng lẻ. Kết quả cho thấy chất lượng Tỷ lệ lỗi bit (BER) giảm đáng kể so với Nhiều đầu vào nhiều người dùng (MU-MIMO), OFDMA và OFDMA-MU-MIMO hiện có trong 802.11ax. Ngoài ra, OFDMA-IDMA hỗ trợ số lượng STA gấp 5 lần OFDMA trong khi vẫn duy trì chất lượng như cũ.
-
-	%======%
-	% \postabstractVN %Thời gian và Tên người thực hiện
-}
-
-\abstractEng{
-	Orthogonal Frequency Division Multiple Access (OFDMA) is introduced in the 802.11 ax standard system to resolve the relevance of transmission problems by splitting the channel into Resource Units (RU) allocated to Stations (STAs), especially in Uplink (UL) multi-user transmission, but struggles with many STAs due to RU size or bandwidth constraints. Non-Othorgonal Multiple Access (NOMA) is a highly appreciated wireless network technique to overcome these issues. The IDMA can take advantage of NOMA, such as enhancing spectrum efficiency, STA capacity, and data rates without RU size or bandwidth changes. This report proposes a combination of Interleave Division Multiple Access (IDMA) to massive the number of STAs in UL multi-user into the existing OFDMA system of 802.11ax. Combining the OFDMA and IDMA can reduce the number of STAs per RU, reducing the Multiple Access Interference, which is the problem when using IDMA individually. The results show a significant decrease in Bit Error Rate (BER) quality compared to existing Multiuser-Multiple Input Multiple Output (MU-MIMO), OFDMA, and OFDMA-MU-MIMO in 802.11ax. In addition, OFDMA-IDMA supports a number of STAs 5 times more than OFDMA while maintaining the same quality.% (BER of approximately. %3\times10^{−4} at SNR = 20 [dB]).
-
-	% \postabstractEng %Thời gian và Tên người thực hiện
-}
-
-% Tạo mục lục, danh sách hình vẽ, danh sách bảng
-\toc
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makeatletter
-\def\cleardoublepage{\clearpage%
-	\if@twoside
-	\ifodd\c@page\else
-	\vspace*{\fill}
-	\hfill
-	\vspace{-20em}
-	\begin{center}
-		Trang này được để trống.
-	\end{center}
-	\vspace{\fill}
-	\thispagestyle{empty}
-	\newpage
-	\if@twocolumn\hbox{}\newpage\fi
-	\fi
-	\fi
-}
-\makeatother
-
-
-
-\chapter{TỔNG QUAN}
-\label{Chap:Intro}
-\input{content/Chap1}
-
-\chapter{TỔNG QUAN HỆ THỐNG IDMA}
-\label{Chap:II}
-\input{content/Chap2}
-
-\chapter{ĐỀ XUẤT OFDMA-IDMA DỰA TRÊN CHUẨN 802.11AX}
-\label{Chap:III}
-\input{content/Chap3}
-
-\chapter{KẾT QUẢ HIỆU NĂNG MÔ PHỎNG}
-\label{Chap:IV}
-\input{content/Chap4}
-
-\chapter{KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}
-\label{Chap:V}
-\input{content/Chap5}
-
-% \chapter{Công trình công bố}
-% \newpage
-% \nocitePub{*}
-
-% \bibliographystylePub{plain}
-% \bibliographyPub{Publication}
-% \renewcommand{\refname}{Công trình công bố}
-
-%%============================
-%%======= Publications =======
-%%============================
-\renewcommand\bibname{Các công trình công bố}
-\begin{thebibliography}{100}
-	% \bibitem{Boney96} T. V. Tai, M. P. N. Tan, L. H. Nam, N. V. Ha, and T. T. T. Nguyen,, ``Convergence Evaluation of OFDMA-IDMA Combination based on IEEE 802.11ax,'' in \emph{2024 16th International Conference on Knowledge and Smart Technology (KST)}, pp. 247--252, 2024.
-
-	\bibitem{MG} T. V. Tai, M. P. N. Tan, N. M. Tri, N. V. Ha, and T. T. T. Nguyen, ``A High Sensitivity SQI with Peak-Amplitude Difference Variance for Wearable ECG Signals'', in \emph{2023 5th International Conference on Bio-engineering for Smart Technologies (BioSMART)}, pp. 1--4, 2023.
-
-	\bibitem{HK} M. P. N. Tan, T. V. Tai, N. M. Tri, N. V. Ha, and T. T. T. Nguyen, ``EEG-ECG Extraction for Wearable All-in-One Healthcare Device'', in \emph{2023 6th International Conference on Electrical, Electronics and System Engineering (ICEESE)}, pp. 61--65, 2023.
-
-	\bibitem{Pan} T. V. Tai, M. P. N. Tan, D. H. Tien, \textit{et al.}, ``Signal Quality Indices based on Skewness of Peak-Peak Interval for Wearable ECG Devices'', in \emph{2023 Signal Processing: Algorithms, Architectures, Arrangements, and Applications (SPA)}, pp. 42--47, 2023.
-
-	\bibitem{MG} T. V. Tai, M. P. N. Tan, N. M. Tri, N. V. Ha, and T. T. T. Nguyen, ``Signal Quality Indices Based on Gain of Amplitude Difference for Wearable ECG Signals'', in \emph{ 2023 International Conference on Advanced Technologies for Communications (ATC)}, pp. 19--24, 2023.
-
-	\bibitem{MG} D. H. Tien, M. P. N. Tan, T. H. Nam, T. V. Tai, and T. T. T. Nguyen, ``A Low-Complexity R-Peak Detection Based on Exponential Weight Mean-Variance for Wearable ECG Devices'', in \emph{ 2023 International Conference on Advanced Technologies for Communications (ATC)}, pp. 415--420, 2023.
-\end{thebibliography}
-
-\renewcommand\bibname{Tài liệu tham khảo}
-\bibliographystyle{IEEEtran}
-\bibliography{IEEEabrv,./0-Bib/Bib_Reference}
-
-
-
-% \nocite{*}
-% \newrefsection
-% \nocite{KST}
-% \printbibliography[keyword={Pub}, resetnumbers = true,title=YOURNAME Publication list] 
-% \bibliographystyle{IEEEtran}
-% \bibliography{IEEEabrv,./0-Bib/Bib_MyPaper}
-
-% \chapter{MINH CHỨNG SẢN PHẨM}
-% \label{Chap:App}
-% \input{content/Appendix}
-
-
-% \Appendix{
-%     \postAppendix
-%     \input{content/Appendix}
-% }
-
-\end{document}
+ \documentclass[a4paper,titlepage,twoside,openright,11pt]{book}
+ %Kích thước chữ:
+ \usepackage[fontsize=13pt]{scrextend}
+ 
+ %%===========================================
+ %%====== Page ref without hyperlink==========
+ %%=========================================== 
+ % \usepackage[pageref]{backref}
+ % \renewcommand\backrefpagesname{}
+ % \renewcommand\backrefxxx[3]{%
+ %   {$\textbf{#1}$}%
+ % }
+ %%=========================================== 
+ 
+ %%=========================================== 
+ %%====== Page ref with hyperlink==========
+ %%=========================================== 
+ \usepackage[pagebackref]{hyperref}
+ \hypersetup{
+	 colorlinks=false,
+	 linkcolor=red,
+	 filecolor=magenta,      
+	 urlcolor=black,
+	 pdftitle={Thesis},
+	 pdfauthor={Ta Viet Tai}
+	 % pdfpagemode=FullScreen,
+ }
+ \usepackage{amsmath,amssymb,amsfonts}
+ \usepackage{cite}
+ \usepackage{physics}
+ \DeclareMathOperator{\diag}{diag}
+ \usepackage{txfonts}
+ \usepackage{times}
+ \usepackage{url}
+ \usepackage{here}
+ \usepackage[dvips]{graphicx}
+ \usepackage{doctorvn,dthook}
+ \usepackage{color,colortbl}
+ \usepackage{caption}
+ \usepackage{subcaption}
+ \usepackage{rotating}
+ 
+ % Algorithm
+ \usepackage{algorithm}
+ \usepackage{algpseudocode}
+ 
+ % Hau usepackage
+ \usepackage{amsmath}
+ \usepackage{booktabs}
+ \usepackage{tabularx}
+ \usepackage{array}
+ \usepackage{multirow}
+ \usepackage{indentfirst}
+ \usepackage{tabularray}
+ 
+ %Table and figure
+ \usepackage{svg}
+ \usepackage{longtable}
+ \usepackage{pgfplots}
+ \usetikzlibrary{shapes,arrows,mindmap,decorations.fractals,spy}%
+ 
+ \DeclareUnicodeCharacter{2212}{−}
+ \usepgfplotslibrary{groupplots,dateplot}
+ \usetikzlibrary{patterns, shapes.arrows}
+ \pgfplotsset{compat=newest}
+ \captionsetup{belowskip=-1.1em}
+ \pgfplotsset{
+   grid style = {
+	 dash pattern = on 0.05mm off 1mm,
+	 line cap = round,
+	 black,
+	 line width = 0.5pt
+   }
+ }
+ %%=========================================== 
+ %============ Water mark ====================
+ %%=========================================== 
+ \usepackage{atbegshi}
+ \AtBeginShipout{\AtBeginShipoutAddToBox{%
+ 	\tikz[overlay,remember picture]
+ 		\node[rotate=50,scale=4.5,lightgray,font=\bfseries]
+ 			at (current page.center) {Ta Viet Tai-FETEL-HCMUS};}}
+ 
+ %%=========================================== 
+ %========= build fig more faster=============
+ %%=========================================== 
+ % \usetikzlibrary{external}
+ % \tikzexternalize[prefix=fig_tkz/]   
+ % need using "pdflatex -shell -escape <mainfile>.tex" for the first compiling. Make sure the folder "fig_tkz" is empty. 
+ 
+ %%=====================
+ %===== Set title=======
+ %%=====================
+ % display: on the different line
+ % hang: on the same line
+ % \titleformat{\chapter}[hang] 
+ %   {\Large\bfseries}{\thechapter~~}{0pt}{\Large} %\Large\centering\chaptertitlename~\thechapter
+ 
+ %%=========================================== 
+ %=========Hyphenation========================
+ %%=========================================== 
+ 
+ % \hyphenation{op-tical net-works semi-conduc-tor}
+ 
+ %%=========================================== 
+ %========= Algorithm=========================
+ %%=========================================== 
+ % \newcommand{\Input}[1]{\algrenewcommand{\alglinenumber}[1]{Input: \ \setcounter{ALG@line}{\numexpr##1-1}} #1}
+ % \newcommand{\Step}[1]{\algrenewcommand{\alglinenumber}[1]{Step ##1: } #1}
+ % \newcommand{\NoNumber}{\algrenewcommand{\alglinenumber}[1]{\setcounter{ALG@line}{\numexpr##1-1} \ \ \ \ \ \ \ \ \ \ }}
+ % \newcommand{\Output}[1]{\algrenewcommand{\alglinenumber}[1]{Output:\setcounter{ALG@line}{\numexpr##1-1}} #1}
+ 
+ 
+ %%=========================================== 
+ %========= Highlight text====================
+ %%=========================================== 
+ \usepackage{color,soul}
+ \newcommand\highlight[1]{\hl{#1}}
+ % \renewcommand{\hl}[1]{#1}                 %%  Remove all highlight       
+ \DeclareRobustCommand{\hlcyan}[1]{{\sethlcolor{cyan!40}\hl{#1}}}
+ \DeclareRobustCommand{\hlgray}[1]{{\sethlcolor{lightgray}\hl{#1}}}
+ 
+ % Publication
+ % \usepackage{natbib}
+ % \usepackage{bibunits}
+ \usepackage[resetlabels,labeled]{multibib}
+ \newcites{Pub}{Publication}
+ % \usepackage[natbib,style=authoryear,refsection=chapter]{biblatex}
+ % \addbibresource{./0-Bib/Publication.bib}
+ 
+ 
+ % Hỗ trợ viết tiếng Việt
+ \usepackage[T1,T5]{fontenc}
+ \usepackage[vietnamese]{babel}
+ 
+ % Đánh số cấp 3
+ \setcounter{secnumdepth}{3}
+ 
+ \begin{document}
+ 
+ 
+ \firstuniversity{đại học quốc gia thành phố hồ chí minh}
+ \seconduniversity{trường đại học khoa học tự nhiên}
+ \faculty{Điện tử -- Viễn thông}
+ \department{Điện tử -- Viễn thông và máy tính}
+ \major{Kỹ thuật điện tử}
+ \departmentId{852020301}
+ \reporttype{Luận văn thạc sĩ} %luận văn tốt nghiệp | Seminar tốt nghiệp | Báo cáo môn học: Viết báo cáo khoa học bằng LaTeX 
+ 
+ %%============ Name ==================
+ \title{Cải tiến phương pháp đánh giá chất lượng \\tín hiệu điện tim cho các thiết bị đeo} % tên đề tài tiếng việt
+ \titleEN{Enhancing Signal Quality Assessment Method in Electrocardiogram Signals for Wearable Devices} % tên đề tài tiếng anh
+ \author{Tạ Viết Tài} %tên tác giả tiếng việt
+ \authorEN{Ta Viet Tai} %tên tác giả tiếng anh
+ \studentid{22C41006}
+ \supervisor{TS.~Trần~Thị~Thảo~Nguyên~}
+ \projectname{Các giao thức truyền thông}
+ % \mail{tttnguyen@hcmus.edu.vn}
+ 
+ %============Tạo trang bìa===============
+ % \makecoverpage %Report project
+ \maketitlepage %thesis
+ 
+ \makesubtitlepage	%Tạo trang lót
+ 
+ % \makeassesspage
+ 
+ %========= create foot header =========
+ % \fancyhf{}
+ % % \rhead[\rightmark]{\includegraphics[height=1.3cm]{figure/ICTLAB_Logo_withName.pdf}}
+ % \fancyhead[RO,LE]{\transparent{0.7}\includegraphics[height=1cm]{figure/ICTLAB_Logo.pdf}}
+ % % \rhead[\rightmark]{\includegraphics[height=1.3cm]{figure/ICTLAB_Logo_withName.pdf}}
+ % % \cfoot{\thepage}
+ % \fancyfoot[LE,RO]{\thepage} 
+ % % \renewcommand{\headrule}{\color[rgb]{0,94,56}}
+ % \renewcommand{\headrulewidth}{0.4pt}
+ 
+ 
+ %Lời cam đoan:
+ \pledge{
+	 Tôi cam đoan Luận văn thạc sĩ ngành Kỹ thuật điện tử, hướng Điện tử--Viễn thông và Máy tính, với đề tài ``CẢI TIẾN PHƯƠNG PHÁP ĐÁNH GIÁ CHẤT LƯỢNG TÍN HIỆU ĐIỆN TIM CHO CÁC THIẾT BỊ ĐEO'' là công trình khoa học do tôi thực hiện dưới sự hướng dẫn của TS. Trần Thị Thảo Nguyên.
+ 
+	 Những kết quả nghiên cứu của đề tài là hoàn toàn trung thực và chính xác. 
+	%====% 
+ \postpledge
+ }
+ 
+ %Lời cám ơn:
+ \acknowledgement{
+	 Content
+ 
+	 Cuối cùng và cũng là quan trọng nhất, chúng tôi xin được cảm ơn tập thể ICTLAB, 
+	 cảm ơn gia đình vì đã luôn luôn âm thầm sát cánh, hỗ trợ chúng tôi trong suốt thời gian vừa qua.
+	%====% 
+ \postackEng
+ }
+ 
+ \abstractVN{
+	 Đa truy cập phân chia theo tần số trực giao (OFDMA) được giới thiệu trong chuẩn 802.11ax để giải quyết mối liên quan của các vấn đề truyền dẫn bằng cách chia kênh thành các Đơn vị tài nguyên (RU) được phân bổ cho các Trạm (STA), đặc biệt là trong truyền dẫn đa người dùng Đường lên (UL), nhưng gặp khó khăn với nhiều STA do hạn chế về kích thước RU hoặc băng thông. Đa truy câp phi trực giao (NOMA) là một kỹ thuật mạng không dây được đánh giá cao để khắc phục những vấn đề này. IDMA có thể tận dụng các ưu điểm của NOMA, chẳng hạn như nâng cao hiệu suất phổ, dung lượng STA và tốc độ dữ liệu mà không cần thay đổi kích thước RU hoặc băng thông. Báo cáo này đề xuất sự kết hợp của Đa truy nhập phân chia xen kẽ (IDMA) để tăng số lượng STA trong nhiều người dùng UL vào hệ thống OFDMA 802.11ax hiện có. Việc kết hợp OFDMA và IDMA có thể giảm số lượng STA trên mỗi RU, giảm Nhiễu đa truy cập, đây là vấn đề khi sử dụng IDMA riêng lẻ. Kết quả cho thấy chất lượng Tỷ lệ lỗi bit (BER) giảm đáng kể so với Nhiều đầu vào nhiều người dùng (MU-MIMO), OFDMA và OFDMA-MU-MIMO hiện có trong 802.11ax. Ngoài ra, OFDMA-IDMA hỗ trợ số lượng STA gấp 5 lần OFDMA trong khi vẫn duy trì chất lượng như cũ.
+ 
+	 %======%
+	 % \postabstractVN %Thời gian và Tên người thực hiện
+ }
+ 
+ \abstractEng{
+	 Orthogonal Frequency Division Multiple Access (OFDMA) is introduced in the 802.11 ax standard system to resolve the relevance of transmission problems by splitting the channel into Resource Units (RU) allocated to Stations (STAs), especially in Uplink (UL) multi-user transmission, but struggles with many STAs due to RU size or bandwidth constraints. Non-Othorgonal Multiple Access (NOMA) is a highly appreciated wireless network technique to overcome these issues. The IDMA can take advantage of NOMA, such as enhancing spectrum efficiency, STA capacity, and data rates without RU size or bandwidth changes. This report proposes a combination of Interleave Division Multiple Access (IDMA) to massive the number of STAs in UL multi-user into the existing OFDMA system of 802.11ax. Combining the OFDMA and IDMA can reduce the number of STAs per RU, reducing the Multiple Access Interference, which is the problem when using IDMA individually. The results show a significant decrease in Bit Error Rate (BER) quality compared to existing Multiuser-Multiple Input Multiple Output (MU-MIMO), OFDMA, and OFDMA-MU-MIMO in 802.11ax. In addition, OFDMA-IDMA supports a number of STAs 5 times more than OFDMA while maintaining the same quality.% (BER of approximately. %3\times10^{−4} at SNR = 20 [dB]).
+		 % \postabstractEng %Thời gian và Tên người thực hiện
+ }
+ 
+ % thông tin luận văn:
+ \reportSum{
+	 \input{content/reportSum}
+ }
+ 
+ % thesis infor:
+ \reportSumEN{
+	 \input{content/reportSumEN}
+ }
+ 
+ 
+ % Tạo mục lục, danh sách hình vẽ, danh sách bảng
+ \toc
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \makeatletter
+ \def\cleardoublepage{\clearpage%
+	 \if@twoside
+	 \ifodd\c@page\else
+	 \vspace*{\fill}
+	 \hfill
+	 \vspace{-20em}
+	 \begin{center}
+		 Trang này được để trống.
+	 \end{center}
+	 \vspace{\fill}
+	 \thispagestyle{empty}
+	 \newpage
+	 \if@twocolumn\hbox{}\newpage\fi
+	 \fi
+	 \fi
+ }
+ \makeatother
+ 
+ 
+ 
+ \chapter{TỔNG QUAN}
+ \label{Chap:Intro}
+ \input{content/Chap1}
+ 
+ \chapter{TỔNG QUAN HỆ THỐNG IDMA}
+ \label{Chap:II}
+ \input{content/Chap2}
+ 
+ \chapter{ĐỀ XUẤT OFDMA-IDMA DỰA TRÊN CHUẨN 802.11AX}
+ \label{Chap:III}
+ \input{content/Chap3}
+ 
+ \chapter{KẾT QUẢ HIỆU NĂNG MÔ PHỎNG}
+ \label{Chap:IV}
+ \input{content/Chap4}
+ 
+ \chapter{KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}
+ \label{Chap:V}
+ \input{content/Chap5}
+ 
+ % \chapter{Công trình công bố}
+ % \newpage
+ % \nocitePub{*}
+ 
+ % \bibliographystylePub{plain}
+ % \bibliographyPub{Publication}
+ % \renewcommand{\refname}{Công trình công bố}
+ 
+ %%============================
+ %%======= Publications =======
+ %%============================
+ \renewcommand\bibname{Các công trình công bố}
+ \begin{thebibliography}{100}
+	 % \bibitem{Boney96} T. V. Tai, M. P. N. Tan, L. H. Nam, N. V. Ha, and T. T. T. Nguyen,, ``Convergence Evaluation of OFDMA-IDMA Combination based on IEEE 802.11ax,'' in \emph{2024 16th International Conference on Knowledge and Smart Technology (KST)}, pp. 247--252, 2024.
+ 
+	 \bibitem{MG} T. V. Tai, M. P. N. Tan, N. M. Tri, N. V. Ha, and T. T. T. Nguyen, ``A High Sensitivity SQI with Peak-Amplitude Difference Variance for Wearable ECG Signals'', in \emph{2023 5th International Conference on Bio-engineering for Smart Technologies (BioSMART)}, pp. 1--4, 2023.
+ 
+	 \bibitem{HK} M. P. N. Tan, T. V. Tai, N. M. Tri, N. V. Ha, and T. T. T. Nguyen, ``EEG-ECG Extraction for Wearable All-in-One Healthcare Device'', in \emph{2023 6th International Conference on Electrical, Electronics and System Engineering (ICEESE)}, pp. 61--65, 2023.
+ 
+	 \bibitem{Pan} T. V. Tai, M. P. N. Tan, D. H. Tien, \textit{et al.}, ``Signal Quality Indices based on Skewness of Peak-Peak Interval for Wearable ECG Devices'', in \emph{2023 Signal Processing: Algorithms, Architectures, Arrangements, and Applications (SPA)}, pp. 42--47, 2023.
+ 
+	 \bibitem{MG} T. V. Tai, M. P. N. Tan, N. M. Tri, N. V. Ha, and T. T. T. Nguyen, ``Signal Quality Indices Based on Gain of Amplitude Difference for Wearable ECG Signals'', in \emph{ 2023 International Conference on Advanced Technologies for Communications (ATC)}, pp. 19--24, 2023.
+ 
+	 \bibitem{MG} D. H. Tien, M. P. N. Tan, T. H. Nam, T. V. Tai, and T. T. T. Nguyen, ``A Low-Complexity R-Peak Detection Based on Exponential Weight Mean-Variance for Wearable ECG Devices'', in \emph{ 2023 International Conference on Advanced Technologies for Communications (ATC)}, pp. 415--420, 2023.
+ \end{thebibliography}
+ 
+ \renewcommand\bibname{Tài liệu tham khảo}
+ \bibliographystyle{IEEEtran}
+ \bibliography{IEEEabrv,./0-Bib/Bib_Reference}
+ 
+ 
+ 
+ % \nocite{*}
+ % \newrefsection
+ % \nocite{KST}
+ % \printbibliography[keyword={Pub}, resetnumbers = true,title=YOURNAME Publication list] 
+ % \bibliographystyle{IEEEtran}
+ % \bibliography{IEEEabrv,./0-Bib/Bib_MyPaper}
+ 
+ % \chapter{MINH CHỨNG SẢN PHẨM}
+ % \label{Chap:App}
+ % \input{content/Appendix}
+ 
+ 
+ % \Appendix{
+ %     \postAppendix
+ %     \input{content/Appendix}
+ % }
+ 
+ \end{document}

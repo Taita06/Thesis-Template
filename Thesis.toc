@@ -1,9 +1,13 @@
 \babel@toc {vietnamese}{}\relax 
-\contentsline {chapter}{Tóm tắt}{i}{chapter*.1}%
-\contentsline {chapter}{Abstract}{iii}{chapter*.2}%
-\contentsline {chapter}{Danh s\'ach h\`inh v\~e}{vii}{chapter*.4}%
-\contentsline {chapter}{Danh s\'ach b\h {a}ng}{ix}{chapter*.5}%
-\contentsline {chapter}{Danh sách chữ viết tắt}{xi}{section*.6}%
+\contentsline {chapter}{Lời cam đoan}{i}{chapter*.1}%
+\contentsline {chapter}{Lời cảm ơn}{iii}{chapter*.2}%
+\contentsline {chapter}{Tóm tắt}{v}{chapter*.3}%
+\contentsline {chapter}{Abstract}{vii}{chapter*.4}%
+\contentsline {chapter}{Trang thông tin luận văn}{ix}{chapter*.5}%
+\contentsline {chapter}{Thesis information}{xi}{chapter*.6}%
+\contentsline {chapter}{Danh s\'ach h\`inh v\~e}{xv}{chapter*.8}%
+\contentsline {chapter}{Danh s\'ach b\h {a}ng}{xvii}{chapter*.9}%
+\contentsline {chapter}{Danh sách chữ viết tắt}{xix}{section*.10}%
 \contentsline {chapter}{\numberline {1}TỔNG QUAN}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}TỔNG QUAN HỆ THỐNG IDMA}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Kiến trúc bộ phát}{5}{section.2.1}%
@@ -16,5 +20,5 @@
 \contentsline {section}{\numberline {3.2}Mô hình phía thu}{11}{section.3.2}%
 \contentsline {chapter}{\numberline {4}KẾT QUẢ HIỆU NĂNG MÔ PHỎNG}{13}{chapter.4}%
 \contentsline {chapter}{\numberline {5}KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}{17}{chapter.5}%
-\contentsline {chapter}{Các công trình công bố}{19}{chapter*.16}%
-\contentsline {chapter}{Tài liệu tham khảo}{21}{chapter*.17}%
+\contentsline {chapter}{Các công trình công bố}{19}{chapter*.20}%
+\contentsline {chapter}{Tài liệu tham khảo}{21}{chapter*.21}%
