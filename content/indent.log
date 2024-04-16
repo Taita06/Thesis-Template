@@ -1,7 +1,7 @@
 INFO:  latexindent.exe version 3.20.3, 2023-02-19, a script to indent .tex files
        latexindent.exe lives here: C:/texlive/2022/bin/win32/
-       Mon Apr 15 01:28:29 2024
-       Filename: d:\02 project\03 Cao hoc\Thesis-Template\content\Chap2.tex
+       Wed Apr 17 01:30:40 2024
+       Filename: d:\02 project\03 Cao hoc\Thesis-Template\content\Chap5.tex
 INFO:  Processing switches:
 INFO:  Directory for backup files and indent.log:
        d:\02 project\03 Cao hoc\Thesis-Template\content
@@ -14,6 +14,7 @@ INFO:  YAML reading settings
        latexindent.pl didn't find indentconfig.yaml or .indentconfig.yaml
        see all possible locations: https://latexindentpl.readthedocs.io/en/latest/sec-appendices.html#indentconfig-options)
 INFO:  Phase 1: searching for objects
+       No objects found.
 INFO:  Phase 2: finding surrounding indentation
 INFO:  Phase 3: indenting objects
 INFO:  Phase 4: final indentation check
