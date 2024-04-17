@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.2)  17 APR 2024 01:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.2)  17 APR 2024 23:18
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1702,13 +1702,13 @@ l.27 \textbf{Chương \ref{Chap:III}}
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.258  \chapter
-               {TỔNG QUAN HỆ THỐNG IDMA} [3]
+l.258 \chapter
+              {TỔNG QUAN HỆ THỐNG IDMA} [3]
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.258  \chapter
-               {TỔNG QUAN HỆ THỐNG IDMA} [4
+l.258 \chapter
+              {TỔNG QUAN HỆ THỐNG IDMA} [4
 
 ]
 Ch\uhorn \ohorn ng 2.
@@ -1730,43 +1730,43 @@ Package pdftex.def Info: figure/Chap2/16-QAM.pdf  used on input line 137.
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.175 \begin{equation}
-                      
+l.175 	\begin{equation}
+                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.175 \begin{equation}
-                      
+l.175 	\begin{equation}
+                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.175 \begin{equation}
-                      
+l.175 	\begin{equation}
+                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.175 \begin{equation}
-                      
+l.175 	\begin{equation}
+                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.179 \begin{equation}
-                      
+l.179 	\begin{equation}
+                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.179 \begin{equation}
-                      
+l.179 	\begin{equation}
+                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.179 \begin{equation}
-                      
+l.179 	\begin{equation}
+                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.179 \begin{equation}
-                      ) [9] [10
+l.179 	\begin{equation}
+                       ) [9] [10
 
 ]
 Ch\uhorn \ohorn ng 3.
@@ -1881,7 +1881,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  110i,21n,117p,2303b,2589s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/vntex/t5.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txex.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txexa.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txsya.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/vntex/urwvn/utmb8v.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/vntex/urwvn/utmr8v.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/vntex/urwvn/utmri8v.pfb>
-Output written on Thesis.pdf (46 pages, 511437 bytes).
+Output written on Thesis.pdf (46 pages, 511429 bytes).
 PDF statistics:
  729 PDF objects out of 1000 (max. 8388607)
  626 compressed objects within 7 object streams
