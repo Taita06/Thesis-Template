@@ -6,8 +6,8 @@
 \glossaryentry{STA?\glossentry{STA}|setentrycounter[]{page}"\glsnumberformat}{1}
 \glossaryentry{RU?\glossentry{RU}|setentrycounter[]{page}"\glsnumberformat}{1}
 \glossaryentry{STA?\glossentry{STA}|setentrycounter[]{page}"\glsnumberformat}{1}
-\glossaryentry{MU-MIMO?\glossentry{MU-MIMO}|setentrycounter[]{page}"\glsnumberformat}{2}
-\glossaryentry{MAI?\glossentry{MAI}|setentrycounter[]{page}"\glsnumberformat}{2}
+\glossaryentry{MU-MIMO?\glossentry{MU-MIMO}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{MAI?\glossentry{MAI}|setentrycounter[]{page}"\glsnumberformat}{1}
 \glossaryentry{NOMA?\glossentry{NOMA}|setentrycounter[]{page}"\glsnumberformat}{2}
 \glossaryentry{BER?\glossentry{BER}|setentrycounter[]{page}"\glsnumberformat}{2}
 \glossaryentry{SIC?\glossentry{SIC}|setentrycounter[]{page}"\glsnumberformat}{2}
@@ -20,11 +20,11 @@
 \glossaryentry{MRC?\glossentry{MRC}|setentrycounter[]{page}"\glsnumberformat}{3}
 \glossaryentry{MIMO?\glossentry{MIMO}|setentrycounter[]{page}"\glsnumberformat}{3}
 \glossaryentry{SF?\glossentry{SF}|setentrycounter[]{page}"\glsnumberformat}{5}
-\glossaryentry{ESE?\glossentry{ESE}|setentrycounter[]{page}"\glsnumberformat}{6}
-\glossaryentry{LLR?\glossentry{LLR}|setentrycounter[]{page}"\glsnumberformat}{6}
-\glossaryentry{APP?\glossentry{APP}|setentrycounter[]{page}"\glsnumberformat}{6}
+\glossaryentry{ESE?\glossentry{ESE}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{LLR?\glossentry{LLR}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{APP?\glossentry{APP}|setentrycounter[]{page}"\glsnumberformat}{5}
 \glossaryentry{MRC?\glossentry{MRC}|setentrycounter[]{page}"\glsnumberformat}{10}
 \glossaryentry{SNR?\glossentry{SNR}|setentrycounter[]{page}"\glsnumberformat}{10}
-\glossaryentry{OFDM?\glossentry{OFDM}|setentrycounter[]{page}"\glsnumberformat}{15}
+\glossaryentry{OFDM?\glossentry{OFDM}|setentrycounter[]{page}"\glsnumberformat}{14}
 \glossaryentry{MAC?\glossentry{MAC}|setentrycounter[]{page}"\glsnumberformat}{15}
 \glossaryentry{MMSE?\glossentry{MMSE}|setentrycounter[]{page}"\glsnumberformat}{15}

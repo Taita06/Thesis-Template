@@ -99,9 +99,10 @@
  %%=====================
  % display: on the different line
  % hang: on the same line
- % \titleformat{\chapter}[hang] 
- %   {\Large\bfseries}{\thechapter~~}{0pt}{\Large} %\Large\centering\chaptertitlename~\thechapter
- 
+ \titleformat{\chapter}[display] 
+  {\LARGE\bfseries}{Chương~\thechapter~~}{0pt}{\vspace{1ex}\LARGE} %\Large\centering\chaptertitlename~\thechapter
+\titlespacing*{\chapter}{0 pt}{-1.25 cm}{1.0 cm} 
+
  %%=========================================== 
  %=========Hyphenation========================
  %%=========================================== 
@@ -177,7 +178,8 @@
 % \fancyhead[RO,LE]{\transparent{0.7}\includegraphics[height=1cm]{figure/ICTLAB_Logo.pdf}}
 % % \rhead[\rightmark]{\includegraphics[height=1.3cm]{figure/ICTLAB_Logo_withName.pdf}}
 % % \cfoot{\thepage}
-% \fancyfoot[LE,RO]{\thepage} 
+\fancyfoot{}
+\fancyfoot[C]{\thepage} 
 % % \renewcommand{\headrule}{\color[rgb]{0,94,56}}
 % \renewcommand{\headrulewidth}{0.4pt}
 

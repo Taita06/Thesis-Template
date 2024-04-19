@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.7.27)  19 APR 2024 02:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.7.27)  19 APR 2024 04:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -620,18 +620,18 @@ Package: glossary-tree 2022/11/03 v4.52 (NLCT)
 \glstreeindent=\skip79
 ))
 
-LaTeX Warning: \include should only be used after \begin{document} on input line 408.
+LaTeX Warning: \include should only be used after \begin{document} on input line 407.
 
 (./glossary.tex)
 \glswrite=\write3
 \glo@main@file=\write4
 \openout4 = `Thesis.glo'.
 
-Package glossaries Info: Writing glossary file Thesis.glo on input line 410.
+Package glossaries Info: Writing glossary file Thesis.glo on input line 409.
 \glo@acronym@file=\write5
 \openout5 = `Thesis.acn'.
 
-Package glossaries Info: Writing glossary file Thesis.acn on input line 410.
+Package glossaries Info: Writing glossary file Thesis.acn on input line 409.
 ) (./dthook.sty
 \rightmargini=\dimen191
 \rightmarginii=\dimen192
@@ -1359,47 +1359,47 @@ LaTeX Warning: Label `MG' multiply defined.
 )
 \openout1 = `Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 145.
-LaTeX Font Info:    Trying to load font information for OML+txmi on input line 145.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 146.
+LaTeX Font Info:    Trying to load font information for OML+txmi on input line 146.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 145.
-LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 145.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 146.
+LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 146.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 145.
-LaTeX Font Info:    Trying to load font information for OMX+txex on input line 145.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 146.
+LaTeX Font Info:    Trying to load font information for OMX+txex on input line 146.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 145.
-LaTeX Font Info:    Trying to load font information for U+txexa on input line 145.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 146.
+LaTeX Font Info:    Trying to load font information for U+txexa on input line 146.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 145.
-LaTeX Font Info:    Trying to load font information for T5+cmr on input line 145.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 146.
+LaTeX Font Info:    Trying to load font information for T5+cmr on input line 146.
  (/usr/share/texlive/texmf-dist/tex/latex/vntex/t5cmr.fd
 File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 145.
-Package hyperref Info: Link coloring OFF on input line 145.
+LaTeX Font Info:    ... okay on input line 146.
+Package hyperref Info: Link coloring OFF on input line 146.
  (./Thesis.out) (./Thesis.out)
 \@outlinefile=\write8
 \openout8 = `Thesis.out'.
@@ -1478,15 +1478,15 @@ Package pgfplots notification 'compat/show suggested version=true': document has
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(99.58464pt, 441.01773pt, 56.9055pt)
-* v-part:(T,H,B)=(99.58464pt, 660.10394pt, 85.35826pt)
+* h-part:(L,W,R)=(91.04881pt, 456.66675pt, 49.79231pt)
+* v-part:(T,H,B)=(45.5244pt, 753.99805pt, 45.5244pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=441.01773pt
-* \textheight=660.10394pt
-* \oddsidemargin=27.31465pt
-* \evensidemargin=27.31465pt
-* \topmargin=-18.89235pt
+* \textwidth=456.66675pt
+* \textheight=753.99805pt
+* \oddsidemargin=18.77882pt
+* \evensidemargin=18.77882pt
+* \topmargin=-72.95259pt
 * \headheight=26.3332pt
 * \headsep=19.8738pt
 * \topskip=11.0pt
@@ -1596,9 +1596,9 @@ File: utxmia.fd 2000/12/15 v3.1
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 32.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
-) [5
+)) [5
 
-]) [6] (./content/reportSumEN.tex
+] (./content/reportSumEN.tex
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -1607,23 +1607,23 @@ File: utxsyc.fd 2000/12/15 v3.1
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
- [7
+) [6
 
-]) [8] (./Thesis.toc
+] (./Thesis.toc
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 1.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-) [9
+) [7
 
 ])
 \tf@toc=\write9
 \openout9 = `Thesis.toc'.
 
- [10] (./Thesis.lof)
+ [8] (./Thesis.lof)
 \tf@lof=\write10
 \openout10 = `Thesis.lof'.
 
- [11
+ [9
 
 
 
@@ -1634,18 +1634,18 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\h' on input line 224.
+(hyperref)                removing `\h' on input line 226.
 
-[12
-
-
-
-] (./Thesis.acr [13
+[10
 
 
 
+] (./Thesis.acr [11
 
-]) [14]
+
+
+
+]) [12]
 Ch\uhorn \ohorn ng 1.
 (./content/Chap1.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
@@ -1662,18 +1662,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has b
 l.20 
       [2] (./figure/Chap1/struc.tex)) [3] [4]
 Ch\uhorn \ohorn ng 2.
-(./content/Chap2.tex [5
-
-]
-<figure/Chap2/IDMA_Tx_Rx_structure-2_k2opt.pdf, id=327, 381.10379pt x 292.9344pt>
+(./content/Chap2.tex
+<figure/Chap2/IDMA_Tx_Rx_structure-2_k2opt.pdf, id=310, 381.10379pt x 292.9344pt>
 File: figure/Chap2/IDMA_Tx_Rx_structure-2_k2opt.pdf Graphic file (type pdf)
 <use figure/Chap2/IDMA_Tx_Rx_structure-2_k2opt.pdf>
 Package pdftex.def Info: figure/Chap2/IDMA_Tx_Rx_structure-2_k2opt.pdf  used on input line 40.
 (pdftex.def)             Requested size: 341.43306pt x 262.44508pt.
- [6 <./figure/Chap2/IDMA_Tx_Rx_structure-2_k2opt.pdf>]
+ [5
+
+] [6 <./figure/Chap2/IDMA_Tx_Rx_structure-2_k2opt.pdf>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 71.
  [7]
-<figure/Chap2/16-QAM.pdf, id=413, 527.57097pt x 526.12558pt>
+<figure/Chap2/16-QAM.pdf, id=412, 527.57097pt x 526.12558pt>
 File: figure/Chap2/16-QAM.pdf Graphic file (type pdf)
 <use figure/Chap2/16-QAM.pdf>
 Package pdftex.def Info: figure/Chap2/16-QAM.pdf  used on input line 137.
@@ -1721,17 +1721,17 @@ l.179 	\begin{equation}
                        ) [10]
 Ch\uhorn \ohorn ng 3.
 
-Overfull \hbox (5.10295pt too wide) in paragraph at lines 258--258
+Overfull \hbox (5.10295pt too wide) in paragraph at lines 260--260
 |\T5/ptm/b/n/22.46396 ^^^— XU‡T OFDMA-IDMA DÜA TR–N CHU‰N
  []
 
 (./content/Chap3.tex
-<figure/chap3/MU-MIMOTx_k2opt.pdf, id=473, 509.7444pt x 370.5042pt>
+<figure/chap3/MU-MIMOTx_k2opt.pdf, id=470, 509.7444pt x 370.5042pt>
 File: figure/chap3/MU-MIMOTx_k2opt.pdf Graphic file (type pdf)
 <use figure/chap3/MU-MIMOTx_k2opt.pdf>
 Package pdftex.def Info: figure/chap3/MU-MIMOTx_k2opt.pdf  used on input line 27.
 (pdftex.def)             Requested size: 267.68582pt x 194.57414pt.
-<figure/chap3/IDMA_Tx_Rx_structure-Trang-4_k2opt.pdf, id=474, 564.18782pt x 136.8312pt>
+<figure/chap3/IDMA_Tx_Rx_structure-Trang-4_k2opt.pdf, id=471, 564.18782pt x 136.8312pt>
 File: figure/chap3/IDMA_Tx_Rx_structure-Trang-4_k2opt.pdf Graphic file (type pdf)
 <use figure/chap3/IDMA_Tx_Rx_structure-Trang-4_k2opt.pdf>
 Package pdftex.def Info: figure/chap3/IDMA_Tx_Rx_structure-Trang-4_k2opt.pdf  used on input line 35.
@@ -1739,12 +1739,12 @@ Package pdftex.def Info: figure/chap3/IDMA_Tx_Rx_structure-Trang-4_k2opt.pdf  us
  [11
 
 ]
-<figure/chap3/Proposed_Receiver.pdf, id=484, 1395.77466pt x 629.71259pt>
+<figure/chap3/Proposed_Receiver.pdf, id=482, 1395.77466pt x 629.71259pt>
 File: figure/chap3/Proposed_Receiver.pdf Graphic file (type pdf)
 <use figure/chap3/Proposed_Receiver.pdf>
 Package pdftex.def Info: figure/chap3/Proposed_Receiver.pdf  used on input line 50.
 (pdftex.def)             Requested size: 341.43306pt x 154.0359pt.
- [12 <./figure/chap3/MU-MIMOTx_k2opt.pdf> <./figure/chap3/IDMA_Tx_Rx_structure-Trang-4_k2opt.pdf>]) [13 <./figure/chap3/Proposed_Receiver.pdf>]
+) [12 <./figure/chap3/MU-MIMOTx_k2opt.pdf> <./figure/chap3/IDMA_Tx_Rx_structure-Trang-4_k2opt.pdf>] [13 <./figure/chap3/Proposed_Receiver.pdf>]
 Ch\uhorn \ohorn ng 4.
 (./content/Chap4.tex [14
 
@@ -1815,12 +1815,12 @@ Package hyperref Warning: Glyph not defined in PU encoding,
 pdfTeX warning (ext4): destination with the same identifier (name{cite.MG}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.317 \end{document}
+l.319 \end{document}
                     
 pdfTeX warning (ext4): destination with the same identifier (name{cite.MG}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.317 \end{document}
+l.319 \end{document}
                     ] (./Thesis.aux)
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1831,22 +1831,27 @@ LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: A129181DD0342076C5820158A297A04A;3748.
-Package rerunfilecheck Info: File `Thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: E0D919EE522E37CB9E0ABEBB158A3530;704.
+
+Package rerunfilecheck Warning: File `Thesis.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `Thesis.brf':
+(rerunfilecheck)             Before: E0D919EE522E37CB9E0ABEBB158A3530;704
+(rerunfilecheck)             After:  7C2D696B93F4F8A4CCA1C5C4F437B9E6;704.
  ) 
 Here is how much of TeX's memory you used:
- 51124 strings out of 476091
- 1134102 string characters out of 5794081
- 1924330 words of memory out of 5000000
- 70396 multiletter control sequences out of 15000+600000
- 596645 words of font info for 114 fonts, out of 8000000 for 9000
+ 51131 strings out of 476091
+ 1134281 string characters out of 5794081
+ 1925330 words of memory out of 5000000
+ 70405 multiletter control sequences out of 15000+600000
+ 594381 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  110i,21n,117p,2305b,2589s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/vntex/t5.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txexa.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/urwvn/utmb8v.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/urwvn/utmr8v.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/urwvn/utmri8v.pfb>
-Output written on Thesis.pdf (38 pages, 506043 bytes).
+Output written on Thesis.pdf (36 pages, 504975 bytes).
 PDF statistics:
- 698 PDF objects out of 1000 (max. 8388607)
- 603 compressed objects within 7 object streams
- 125 named destinations out of 1000 (max. 500000)
+ 692 PDF objects out of 1000 (max. 8388607)
+ 600 compressed objects within 6 object streams
+ 123 named destinations out of 1000 (max. 500000)
  222 words of extra memory for PDF output out of 10000 (max. 10000000)
 

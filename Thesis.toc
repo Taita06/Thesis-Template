@@ -4,10 +4,10 @@
 \contentsline {chapter}{Tóm tắt}{iii}{chapter*.3}%
 \contentsline {chapter}{Abstract}{iv}{chapter*.4}%
 \contentsline {chapter}{Trang thông tin luận văn}{v}{chapter*.5}%
-\contentsline {chapter}{Thesis information}{vii}{chapter*.6}%
-\contentsline {chapter}{Danh s\'ach h\`inh v\~e}{xi}{chapter*.8}%
-\contentsline {chapter}{Danh s\'ach b\h {a}ng}{xii}{chapter*.9}%
-\contentsline {chapter}{Danh sách chữ viết tắt}{xiii}{section*.10}%
+\contentsline {chapter}{Thesis information}{vi}{chapter*.6}%
+\contentsline {chapter}{Danh s\'ach h\`inh v\~e}{ix}{chapter*.8}%
+\contentsline {chapter}{Danh s\'ach b\h {a}ng}{x}{chapter*.9}%
+\contentsline {chapter}{Danh sách chữ viết tắt}{xi}{section*.10}%
 \contentsline {chapter}{\numberline {1}TỔNG QUAN}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}TỔNG QUAN HỆ THỐNG IDMA}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Kiến trúc bộ phát}{5}{section.2.1}%
