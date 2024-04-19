@@ -4,7 +4,7 @@
 
  %In 1 mặt: oneside
  %In 2 mặt: twoside
- \documentclass[a4paper,titlepage,twoside,openright,11pt]{book}
+ \documentclass[a4paper,titlepage,oneside,openright,11pt]{book}
  %Kích thước chữ:
  \usepackage[fontsize=13pt]{scrextend}
  
@@ -275,6 +275,9 @@
 % \bibliographyPub{Publication}
 % \renewcommand{\refname}{Công trình công bố}
 
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,./0-Bib/Bib_Reference}
+
 %%============================
 %%======= Publications =======
 %%============================
@@ -292,11 +295,6 @@
 
 	\bibitem{MG} D. H. Tien, M. P. N. Tan, T. H. Nam, T. V. Tai, and T. T. T. Nguyen, ``A Low-Complexity R-Peak Detection Based on Exponential Weight Mean-Variance for Wearable ECG Devices'', in \emph{ 2023 International Conference on Advanced Technologies for Communications (ATC)}, pp. 415--420, 2023.
 \end{thebibliography}
-
-\renewcommand\bibname{Tài liệu tham khảo}
-\bibliographystyle{IEEEtran}
-\bibliography{IEEEabrv,./0-Bib/Bib_Reference}
-
 
 
 % \nocite{*}

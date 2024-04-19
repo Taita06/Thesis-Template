@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.7.27)  18 APR 2024 11:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.7.27)  19 APR 2024 02:48
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **"/home/ict-latex/Public/Tai/Thesis Template/Thesis"
@@ -620,18 +620,18 @@ Package: glossary-tree 2022/11/03 v4.52 (NLCT)
 \glstreeindent=\skip79
 ))
 
-LaTeX Warning: \include should only be used after \begin{document} on input line 406.
+LaTeX Warning: \include should only be used after \begin{document} on input line 408.
 
 (./glossary.tex)
 \glswrite=\write3
 \glo@main@file=\write4
 \openout4 = `Thesis.glo'.
 
-Package glossaries Info: Writing glossary file Thesis.glo on input line 408.
+Package glossaries Info: Writing glossary file Thesis.glo on input line 410.
 \glo@acronym@file=\write5
 \openout5 = `Thesis.acn'.
 
-Package glossaries Info: Writing glossary file Thesis.acn on input line 408.
+Package glossaries Info: Writing glossary file Thesis.acn on input line 410.
 ) (./dthook.sty
 \rightmargini=\dimen191
 \rightmarginii=\dimen192
@@ -825,19 +825,7 @@ Package: svg 2020/11/26 v2.02k (include SVG pictures)
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Unrestricted shell escape enabled on input line 75.
-) (/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
-Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
- (/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
-Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-)
-runsystem(uname -s > "Thesis.w18")...executed.
-
- (./Thesis.w18)
-runsystem(rm -- "Thesis.w18")...executed.
-
+Package shellesc Info: Restricted shell escape enabled on input line 77.
 )
 \c@svg@param@lastpage=\count386
 \svg@box=\box90
@@ -1424,8 +1412,8 @@ Package hyperref Info: Link coloring OFF on input line 145.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
-* h-part:(L,W,R)=(71.70166pt, 418.25368pt, 107.55254pt)
+* modes: 
+* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
 * v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
@@ -1438,7 +1426,7 @@ Package hyperref Info: Link coloring OFF on input line 145.
 * \headsep=19.8738pt
 * \topskip=11.0pt
 * \footskip=37.7963pt
-* \marginparwidth=106.0pt
+* \marginparwidth=53.0pt
 * \marginparsep=7.0pt
 * \columnsep=10.0pt
 * \skip\footins=11.69997pt plus 5.19942pt minus 2.60054pt
@@ -1446,8 +1434,8 @@ Package hyperref Info: Link coloring OFF on input line 145.
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -1489,21 +1477,21 @@ Package pgfplots notification 'compat/show suggested version=true': document has
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
-* h-part:(L,W,R)=(91.04881pt, 456.66675pt, 49.79231pt)
-* v-part:(T,H,B)=(45.5244pt, 753.99805pt, 45.5244pt)
+* modes: 
+* h-part:(L,W,R)=(99.58464pt, 441.01773pt, 56.9055pt)
+* v-part:(T,H,B)=(99.58464pt, 660.10394pt, 85.35826pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=456.66675pt
-* \textheight=753.99805pt
-* \oddsidemargin=18.77882pt
-* \evensidemargin=-22.47768pt
-* \topmargin=-72.95259pt
+* \textwidth=441.01773pt
+* \textheight=660.10394pt
+* \oddsidemargin=27.31465pt
+* \evensidemargin=27.31465pt
+* \topmargin=-18.89235pt
 * \headheight=26.3332pt
 * \headsep=19.8738pt
 * \topskip=11.0pt
 * \footskip=37.7963pt
-* \marginparwidth=106.0pt
+* \marginparwidth=53.0pt
 * \marginparsep=7.0pt
 * \columnsep=10.0pt
 * \skip\footins=11.69997pt plus 5.19942pt minus 2.60054pt
@@ -1511,8 +1499,8 @@ Package pgfplots notification 'compat/show suggested version=true': document has
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -1525,17 +1513,13 @@ Non-PDF special ignored!
 
 
 
-] [2
-
-
-
 ]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
+* modes: 
 * h-part:(L,W,R)=(91.04881pt, 456.66675pt, 49.79231pt)
 * v-part:(T,H,B)=(45.5244pt, 753.99805pt, 45.5244pt)
 * \paperwidth=597.50787pt
@@ -1543,13 +1527,13 @@ Non-PDF special ignored!
 * \textwidth=456.66675pt
 * \textheight=753.99805pt
 * \oddsidemargin=18.77882pt
-* \evensidemargin=-22.47768pt
+* \evensidemargin=18.77882pt
 * \topmargin=-72.95259pt
 * \headheight=26.3332pt
 * \headsep=19.8738pt
 * \topskip=11.0pt
 * \footskip=37.7963pt
-* \marginparwidth=106.0pt
+* \marginparwidth=53.0pt
 * \marginparsep=7.0pt
 * \columnsep=10.0pt
 * \skip\footins=11.69997pt plus 5.19942pt minus 2.60054pt
@@ -1557,39 +1541,33 @@ Non-PDF special ignored!
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- [3
+ [2
 
 
-] [4
 
 
 
 ] [1
 
+
+
+
 ] [2
+
 
 
 ] [3
 
+
+
 ] [4
 
-
-] [5
-
-] [6
-
-] [7] [8
-
 ] (./content/reportSum.tex
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
-
- []
-
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -1598,29 +1576,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
-LaTeX Font Info:    Calculating math sizes for size <13> on input line 33.
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 33.
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
+LaTeX Font Info:    Calculating math sizes for size <13> on input line 32.
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 32.
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsya on input line 33.
+LaTeX Font Info:    Trying to load font information for U+txsya on input line 32.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyb on input line 33.
+LaTeX Font Info:    Trying to load font information for U+txsyb on input line 32.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 33.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 32.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 33.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 32.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
-)) [9] [10
+) [5
 
-] (./content/reportSumEN.tex
+]) [6] (./content/reportSumEN.tex
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -1629,25 +1607,24 @@ File: utxsyc.fd 2000/12/15 v3.1
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
-) [11] [12
+ [7
 
-] (./Thesis.toc
+]) [8] (./Thesis.toc
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 1.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-) [13])
+) [9
+
+])
 \tf@toc=\write9
 \openout9 = `Thesis.toc'.
 
- [14] (./Thesis.lof)
+ [10] (./Thesis.lof)
 \tf@lof=\write10
 \openout10 = `Thesis.lof'.
 
- [15
+ [11
 
-
-
-] [16
 
 
 ] (./Thesis.lot)
@@ -1659,58 +1636,49 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 Package hyperref Warning: Glyph not defined in PU encoding,
 (hyperref)                removing `\h' on input line 224.
 
-[17
-
-] [18
+[12
 
 
-] (./Thesis.acr [19
+
+] (./Thesis.acr [13
 
 
-]) [20]
+
+
+]) [14]
 Ch\uhorn \ohorn ng 1.
 (./content/Chap1.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13 
-      [1
+l.9 
+     [1
 
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.27 \textbf{Chương \ref{Chap:III}}
-                                     : Đề xuất kiến trúc mô hình b... [2] (./figure/Chap1/struc.tex))
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.254 \chapter
-              {TỔNG QUAN HỆ THỐNG IDMA} [3]
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.254 \chapter
-              {TỔNG QUAN HỆ THỐNG IDMA} [4
+l.20 
+      [2] (./figure/Chap1/struc.tex)) [3] [4]
+Ch\uhorn \ohorn ng 2.
+(./content/Chap2.tex [5
 
 ]
-Ch\uhorn \ohorn ng 2.
-(./content/Chap2.tex
-<figure/Chap2/IDMA_Tx_Rx_structure-2_k2opt.pdf, id=344, 381.10379pt x 292.9344pt>
+<figure/Chap2/IDMA_Tx_Rx_structure-2_k2opt.pdf, id=327, 381.10379pt x 292.9344pt>
 File: figure/Chap2/IDMA_Tx_Rx_structure-2_k2opt.pdf Graphic file (type pdf)
 <use figure/Chap2/IDMA_Tx_Rx_structure-2_k2opt.pdf>
 Package pdftex.def Info: figure/Chap2/IDMA_Tx_Rx_structure-2_k2opt.pdf  used on input line 40.
 (pdftex.def)             Requested size: 341.43306pt x 262.44508pt.
- [5]
+ [6 <./figure/Chap2/IDMA_Tx_Rx_structure-2_k2opt.pdf>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 71.
- [6 <./figure/Chap2/IDMA_Tx_Rx_structure-2_k2opt.pdf>] [7]
-<figure/Chap2/16-QAM.pdf, id=447, 527.57097pt x 526.12558pt>
+ [7]
+<figure/Chap2/16-QAM.pdf, id=413, 527.57097pt x 526.12558pt>
 File: figure/Chap2/16-QAM.pdf Graphic file (type pdf)
 <use figure/Chap2/16-QAM.pdf>
 Package pdftex.def Info: figure/Chap2/16-QAM.pdf  used on input line 137.
 (pdftex.def)             Requested size: 341.43306pt x 340.50041pt.
- [8 <./figure/Chap2/16-QAM.pdf>]
+ [8] [9 <./figure/Chap2/16-QAM.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1750,9 +1718,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2.2
 <to be read again> 
                    \relax 
 l.179 	\begin{equation}
-                       ) [9] [10
-
-]
+                       ) [10]
 Ch\uhorn \ohorn ng 3.
 
 Overfull \hbox (5.10295pt too wide) in paragraph at lines 258--258
@@ -1760,32 +1726,31 @@ Overfull \hbox (5.10295pt too wide) in paragraph at lines 258--258
  []
 
 (./content/Chap3.tex
-<figure/chap3/MU-MIMOTx_k2opt.pdf, id=504, 509.7444pt x 370.5042pt>
+<figure/chap3/MU-MIMOTx_k2opt.pdf, id=473, 509.7444pt x 370.5042pt>
 File: figure/chap3/MU-MIMOTx_k2opt.pdf Graphic file (type pdf)
 <use figure/chap3/MU-MIMOTx_k2opt.pdf>
 Package pdftex.def Info: figure/chap3/MU-MIMOTx_k2opt.pdf  used on input line 27.
 (pdftex.def)             Requested size: 267.68582pt x 194.57414pt.
-<figure/chap3/IDMA_Tx_Rx_structure-Trang-4_k2opt.pdf, id=505, 564.18782pt x 136.8312pt>
+<figure/chap3/IDMA_Tx_Rx_structure-Trang-4_k2opt.pdf, id=474, 564.18782pt x 136.8312pt>
 File: figure/chap3/IDMA_Tx_Rx_structure-Trang-4_k2opt.pdf Graphic file (type pdf)
 <use figure/chap3/IDMA_Tx_Rx_structure-Trang-4_k2opt.pdf>
 Package pdftex.def Info: figure/chap3/IDMA_Tx_Rx_structure-Trang-4_k2opt.pdf  used on input line 35.
 (pdftex.def)             Requested size: 223.0721pt x 54.10097pt.
- [11]
-<figure/chap3/Proposed_Receiver.pdf, id=515, 1395.77466pt x 629.71259pt>
+ [11
+
+]
+<figure/chap3/Proposed_Receiver.pdf, id=484, 1395.77466pt x 629.71259pt>
 File: figure/chap3/Proposed_Receiver.pdf Graphic file (type pdf)
 <use figure/chap3/Proposed_Receiver.pdf>
 Package pdftex.def Info: figure/chap3/Proposed_Receiver.pdf  used on input line 50.
 (pdftex.def)             Requested size: 341.43306pt x 154.0359pt.
-) [12 <./figure/chap3/MU-MIMOTx_k2opt.pdf> <./figure/chap3/IDMA_Tx_Rx_structure-Trang-4_k2opt.pdf> <./figure/chap3/Proposed_Receiver.pdf>]
+ [12 <./figure/chap3/MU-MIMOTx_k2opt.pdf> <./figure/chap3/IDMA_Tx_Rx_structure-Trang-4_k2opt.pdf>]) [13 <./figure/chap3/Proposed_Receiver.pdf>]
 Ch\uhorn \ohorn ng 4.
-(./content/Chap4.tex [13
+(./content/Chap4.tex [14
 
 ] (./figure/chap4/IT-change.tex
 Package pgfplots info on input line 44: Using 'lua backend=false' for axis: ymode=log unsupported (yet).
-)
-Underfull \vbox (badness 1694) has occurred while \output is active []
-
- [14] (./figure/chap4/MU-MIMO.tex
+) [15] [16] (./figure/chap4/MU-MIMO.tex
 Package pgfplots info on input line 45: Using 'lua backend=false' for axis: ymode=log unsupported (yet).
 )
 Overfull \hbox (7.76103pt too wide) in paragraph at lines 154--68
@@ -1821,29 +1786,42 @@ Overfull \hbox (14.13516pt too wide) in paragraph at lines 172--173
 [][] 
  []
 
-)) [15] [16]
+)
+
+LaTeX Warning: Float too large for page by 18.85419pt on input line 91.
+
+) [17] [18]
 Ch\uhorn \ohorn ng 5.
-(./content/Chap5.tex) (./Thesis.brf)
+(./content/Chap5.tex) (./Thesis.bbl (./Thesis.brf)
 \tf@brf=\write12
 \openout12 = `Thesis.brf'.
 
- [17
+ [19
 
-] [18
+]
 
-] (./Thesis.bbl (./Thesis.brf) [19
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\ecircumflex' on input line 2.
+
+
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\h' on input line 2.
+
+[20
+
+]) (./Thesis.brf) [21] [22
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{cite.MG}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2 \begin{thebibliography}{10}
-                               
+l.317 \end{document}
+                    
 pdfTeX warning (ext4): destination with the same identifier (name{cite.MG}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2 \begin{thebibliography}{10}
-                               ] [20
-
-] [21]) [22] (./Thesis.aux)
+l.317 \end{document}
+                    ] (./Thesis.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
@@ -1852,23 +1830,23 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: F77B6F873A42CCB039B4144AB8EFC49C;3751.
+(rerunfilecheck)             Checksum: A129181DD0342076C5820158A297A04A;3748.
 Package rerunfilecheck Info: File `Thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: F7D15C1367115C97A969691CF3F562F4;704.
+(rerunfilecheck)             Checksum: E0D919EE522E37CB9E0ABEBB158A3530;704.
  ) 
 Here is how much of TeX's memory you used:
- 51258 strings out of 476091
- 1137096 string characters out of 5794081
- 1925330 words of memory out of 5000000
- 70510 multiletter control sequences out of 15000+600000
- 596719 words of font info for 114 fonts, out of 8000000 for 9000
+ 51124 strings out of 476091
+ 1134102 string characters out of 5794081
+ 1924330 words of memory out of 5000000
+ 70396 multiletter control sequences out of 15000+600000
+ 596645 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  110i,21n,117p,2305b,2589s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/vntex/t5.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txexa.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/urwvn/utmb8v.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/urwvn/utmr8v.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/urwvn/utmri8v.pfb>
-Output written on Thesis.pdf (46 pages, 508834 bytes).
+Output written on Thesis.pdf (38 pages, 506043 bytes).
 PDF statistics:
- 729 PDF objects out of 1000 (max. 8388607)
- 626 compressed objects within 7 object streams
- 131 named destinations out of 1000 (max. 500000)
+ 698 PDF objects out of 1000 (max. 8388607)
+ 603 compressed objects within 7 object streams
+ 125 named destinations out of 1000 (max. 500000)
  222 words of extra memory for PDF output out of 10000 (max. 10000000)
 
