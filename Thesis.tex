@@ -11,11 +11,11 @@
  %%===========================================
  %%====== Page ref without hyperlink==========
  %%=========================================== 
- % \usepackage[pageref]{backref}
- % \renewcommand\backrefpagesname{}
- % \renewcommand\backrefxxx[3]{%
- %   {$\textbf{#1}$}%
- % }
+%  \usepackage[pageref]{backref}
+%  \renewcommand\backrefpagesname{}
+%  \renewcommand\backrefxxx[3]{%
+%    {$\textbf{#1}$}%
+%  }
  %%=========================================== 
  
  %%=========================================== 
@@ -45,6 +45,7 @@
  \usepackage{caption}
  \usepackage{subcaption}
  \usepackage{rotating}
+ \usepackage{setspace}
  
  % Algorithm
  \usepackage{algorithm}
@@ -60,6 +61,7 @@
  \usepackage{tabularray}
  
  %Table and figure
+ \usepackage{tikz}
  \usepackage{svg}
  \usepackage{longtable}
  \usepackage{pgfplots}
@@ -90,19 +92,10 @@
  %%=========================================== 
  %========= build fig more faster=============
  %%=========================================== 
- % \usetikzlibrary{external}
- % \tikzexternalize[prefix=fig_tkz/]   
- % need using "pdflatex -shell -escape <mainfile>.tex" for the first compiling. Make sure the folder "fig_tkz" is empty. 
+%  \usetikzlibrary{external}
+%  \tikzexternalize[prefix=fig_tikz/]   
+ % need using "pdflatex -shell-escape <mainfile>.tex" for the first compiling. Make sure the folder "fig_tikz" is empty. 
  
- %%=====================
- %===== Set title=======
- %%=====================
- % display: on the different line
- % hang: on the same line
- \titleformat{\chapter}[display] 
-  {\LARGE\bfseries}{Chương~\thechapter~~}{0pt}{\vspace{1ex}\LARGE} %\Large\centering\chaptertitlename~\thechapter
-\titlespacing*{\chapter}{0 pt}{-1.25 cm}{1.0 cm} 
-
  %%=========================================== 
  %=========Hyphenation========================
  %%=========================================== 
@@ -250,7 +243,7 @@
 
 
 \chapter{TỔNG QUAN}
-\label{Chap:Intro}
+\label{Chap:I}
 \input{content/Chap1}
 
 \chapter{TỔNG QUAN HỆ THỐNG IDMA}
@@ -277,6 +270,7 @@
 % \bibliographyPub{Publication}
 % \renewcommand{\refname}{Công trình công bố}
 
+\setstretch{1.08}
 \bibliographystyle{IEEEtran}
 \bibliography{IEEEabrv,./0-Bib/Bib_Reference}
 

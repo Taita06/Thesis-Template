@@ -19,6 +19,6 @@
 \contentsline {section}{\numberline {3.1}Mô hình phía phát}{11}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Mô hình phía thu}{12}{section.3.2}%
 \contentsline {chapter}{\numberline {4}KẾT QUẢ HIỆU NĂNG MÔ PHỎNG}{14}{chapter.4}%
-\contentsline {chapter}{\numberline {5}KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}{19}{chapter.5}%
-\contentsline {chapter}{T\`ai li\d \ecircumflex u tham kh\h {a}o}{20}{chapter*.20}%
-\contentsline {chapter}{Các công trình công bố}{22}{chapter*.21}%
+\contentsline {chapter}{\numberline {5}KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}{18}{chapter.5}%
+\contentsline {chapter}{T\`ai li\d \ecircumflex u tham kh\h {a}o}{19}{chapter*.20}%
+\contentsline {chapter}{Các công trình công bố}{21}{chapter*.21}%
