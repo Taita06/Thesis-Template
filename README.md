@@ -41,4 +41,4 @@ The display of the acronym
 ```
 
 ## Acknowledge
-To know more and contribute to the sample, please contact me via [tvtai@hcmus.edu.vn](tvtai@hcmus.edu.vn)
+To know more and contribute to the template, please contact me via [tvtai@hcmus.edu.vn](tvtai@hcmus.edu.vn)
