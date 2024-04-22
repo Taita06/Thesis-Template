@@ -18,5 +18,19 @@ This template support tikz picture, you can learn how to use tikz picture at [Ti
 > In case you have too many Tikz images, you can convert it to pdf and then use it as an image, which will save a lot of compilation time. You can do this by using 
 ``` pdflatex -shell-escape <mainfile>.tex ```
 
-> [!Warning]
-> You must make sure the fig_tikz folder is empty and before converting the image, you must comment `\maketitlepage` and comment the code make the water mark in `Thesis.tex` file.
+> [!Important]
+> You must make sure the fig_tikz folder is empty and before converting the image, you must comment `\maketitlepage` and comment the code to make the watermark in the `Thesis.tex` file.
+
+## [The Glossary](https://www.overleaf.com/learn/latex/Glossaries)
+
+The acrnonyms are define in `glossary.tex` file. Adding new acronym, using `\newacronym{label}{Acrnonym}{Full name}`
+Example: 
+```
+\newacronym{tcp}{TCP}{Transmission Control Protocol}
+```
+The display of acronym
+```
+\acrfull{tcp}  --> "Transmission Control Protocol (TCP)"
+\acrlong{tcp}  --> "Transmission Control Protocol"
+\acrshort{tcp} --> "TCP"
+```
