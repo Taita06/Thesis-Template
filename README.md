@@ -1,6 +1,7 @@
 # This template was created by Ta Viet Tai, ICTLAB, FETEL, VNU-HCM University of Science.
 
-This template was created based on the standards of the 2020 graduation thesis of master students at the VNU-HCM University of Science.
+This template was created based on the standards of the 2020 graduation thesis of master students at the VNU-HCM University of Science. 
+The content in the template is for reference only. The template supports both Vietnamese and English. To use English, please comment `\usepackage[vietnamese]{babel}` in `Thesis.tex` file.
 
 ## The thesis formatting
 
