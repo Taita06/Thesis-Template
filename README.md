@@ -1,36 +1,43 @@
 # This template was created by Ta Viet Tai, ICTLAB, FETEL, VNU-HCM University of Science.
 
-## The thesis formating
+This template was created based on the standards of the 2020 graduation thesis of master students at the VNU-HCM University of Science.
 
-The format of the thesis (title, subtitle, thesis information, etc.) are created in `doctorvn.sty` file. If you want to modify some format, you can modify this in `doctorvn.sty`.
+## The thesis formatting
 
-## The thebibliography
+The format of the thesis (title, subtitle, thesis information, etc.) was created in `doctorvn.sty` file. If you want to modify some format, you can modify this in `doctorvn.sty`.
 
-The thebibliography of this theis was automatic created and you much put all of references as `.bib` format in `./0-bib/Bib_Reference.bib`
+## The bibliography
 
-If you have several publication, please adding it manually in the end of `Thesis.tex` file
+The bibliography of this thesis was automatically created and you must put all of the references as `.bib` format in `./0-bib/Bib_Reference.bib`
+
+If you have several publications, please add them manually at the end of `Thesis.tex` file
 
 ## The figures and tables
 
-This template support tikz picture, you can learn how to use tikz picture at [Tikz.org](https://tikz.org/) or [Tikz.dev](https://tikz.dev/)
+This template supports the Tikz picture, you can learn how to use the Tikz picture at [Tikz.org](https://tikz.org/) or [Tikz.dev](https://tikz.dev/)
 
 > [!TIP]
-> In case you have too many Tikz images, you can convert it to pdf and then use it as an image, which will save a lot of compilation time. You can do this by using 
-``` pdflatex -shell-escape <mainfile>.tex ```
+> In case you have too many Tikz images, you can convert it to PDF and then use it as an image, which will save a lot of compilation time. You can do this by using 
+``` 
+pdflatex -shell-escape <mainfile>.tex 
+```
 
 > [!Important]
-> You must make sure the fig_tikz folder is empty and before converting the image, you must comment `\maketitlepage` and comment the code to make the watermark in the `Thesis.tex` file.
+> You must make sure the `fig_tikz` folder is empty and before converting the image, you must comment `\maketitlepage` and comment the code to make the watermark in the `Thesis.tex` file.
 
 ## [The Glossary](https://www.overleaf.com/learn/latex/Glossaries)
 
-The acrnonyms are define in `glossary.tex` file. Adding new acronym, using `\newacronym{label}{Acrnonym}{Full name}`
+The acronyms are defined in `glossary.tex` file. Adding new acronym, using `\newacronym{label}{Acrnonym}{Full name}`
 Example: 
 ```
 \newacronym{tcp}{TCP}{Transmission Control Protocol}
 ```
-The display of acronym
+The display of the acronym
 ```
 \acrfull{tcp}  --> "Transmission Control Protocol (TCP)"
 \acrlong{tcp}  --> "Transmission Control Protocol"
 \acrshort{tcp} --> "TCP"
 ```
+
+## Acknowledge
+To know more and contribute to the sample, please contact me via [tvtai@hcmus.edu.vn](tvtai@hcmus.edu.vn)
