@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.7.27)  20 APR 2024 07:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.7.27)  22 APR 2024 07:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1351,14 +1351,7 @@ Package babel Info: Making " an active character on input line 147.
 )) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/vi/babel-vietnamese.tex
 Package babel Info: Importing font and identification data for vietnamese
 (babel)             from babel-vi.ini. Reported on input line 11.
-) (./Thesis.aux
-
-LaTeX Warning: Label `MG' multiply defined.
-
-
-LaTeX Warning: Label `MG' multiply defined.
-
-)
+) (./Thesis.aux)
 \openout1 = `Thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 139.
@@ -1578,24 +1571,24 @@ Non-PDF special ignored!
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
-LaTeX Font Info:    Calculating math sizes for size <13> on input line 32.
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 32.
+LaTeX Font Info:    Calculating math sizes for size <13> on input line 31.
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 31.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsya on input line 32.
+LaTeX Font Info:    Trying to load font information for U+txsya on input line 31.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyb on input line 32.
+LaTeX Font Info:    Trying to load font information for U+txsyb on input line 31.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 32.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 31.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 32.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 31.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )) [5
@@ -1636,7 +1629,7 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\h' on input line 219.
+(hyperref)                removing `\h' on input line 217.
 
 [10
 
@@ -1723,7 +1716,7 @@ l.179 	\begin{equation}
                        ) [10]
 Ch\uhorn \ohorn ng 3.
 
-Overfull \hbox (5.10295pt too wide) in paragraph at lines 253--253
+Overfull \hbox (5.10295pt too wide) in paragraph at lines 251--251
 |\T5/ptm/b/n/22.46396 ^^^— XU‡T OFDMA-IDMA DÜA TR–N CHU‰N
  []
 
@@ -1809,23 +1802,10 @@ Package hyperref Warning: Glyph not defined in PU encoding,
 
 ]) (./Thesis.brf) [20] [21
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{cite.MG}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.313 \end{document}
-                    
-pdfTeX warning (ext4): destination with the same identifier (name{cite.MG}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.313 \end{document}
-                    ] (./Thesis.aux)
+] (./Thesis.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
-
-
-LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: A129181DD0342076C5820158A297A04A;3748.
@@ -1833,18 +1813,18 @@ Package rerunfilecheck Info: File `Thesis.brf' has not changed.
 (rerunfilecheck)             Checksum: A32F31C7770EAE9423BC1BDE7B668705;704.
  ) 
 Here is how much of TeX's memory you used:
- 51161 strings out of 476091
- 1134970 string characters out of 5794081
+ 51151 strings out of 476091
+ 1134932 string characters out of 5794081
  1924330 words of memory out of 5000000
- 70432 multiletter control sequences out of 15000+600000
+ 70424 multiletter control sequences out of 15000+600000
  596645 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  110i,21n,117p,2305b,2589s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/vntex/t5.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txexa.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/urwvn/utmb8v.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/urwvn/utmr8v.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/urwvn/utmri8v.pfb>
-Output written on Thesis.pdf (35 pages, 504379 bytes).
+Output written on Thesis.pdf (35 pages, 501904 bytes).
 PDF statistics:
- 681 PDF objects out of 1000 (max. 8388607)
- 590 compressed objects within 6 object streams
- 122 named destinations out of 1000 (max. 500000)
+ 678 PDF objects out of 1000 (max. 8388607)
+ 587 compressed objects within 6 object streams
+ 120 named destinations out of 1000 (max. 500000)
  222 words of extra memory for PDF output out of 10000 (max. 10000000)
 
