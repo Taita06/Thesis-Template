@@ -35,9 +35,11 @@ Example:
 ```
 The display of the acronym
 ```
-\acrfull{tcp}  --> "Transmission Control Protocol (TCP)"
-\acrlong{tcp}  --> "Transmission Control Protocol"
-\acrshort{tcp} --> "TCP"
+
+\acrfullvn{tcp} --> "(Transmission Control Protocol -- TCP)"
+\acrfull{tcp}   --> "Transmission Control Protocol (TCP)"
+\acrlong{tcp}   --> "Transmission Control Protocol"
+\acrshort{tcp}  --> "TCP"
 ```
 
 ## Acknowledge
